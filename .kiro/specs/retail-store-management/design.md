@@ -6,6 +6,8 @@ The Retail Store Management System (RSMS) is a native iOS application built with
 
 The architecture follows **MVVM with Swift Concurrency**. Each role is delivered as a self-contained feature module that plugs into a shared core (authentication, RBAC, data models, networking, persistence). Item-level operations use **QR scanning via the Vision framework**. Payments use **Razorpay** and a **card terminal**. AI recommendations use **Core ML**.
 
+Customers are not an in-app role. Where after-sales requires customer action — approving an estimate and signing off on collection — the system reaches them through a **secure, tokenized magic link** (SMS/email) that opens a lightweight, ticket-scoped web view requiring no account or app install.
+
 This document maps directly to the 14 requirements in `requirements.md` and describes how each is realized.
 
 ### Design Goals
@@ -69,6 +71,7 @@ RSMS/
 │   ├── Pricing/              # Floor/band enforcement (Req 3, 6, 10)
 │   ├── Payments/             # Razorpay + card terminal (Req 10)
 │   ├── Recommendations/      # Core ML inference (Req 8)
+│   ├── CustomerLink/         # Magic-link generation/validation (Req 15)
 │   └── Notifications/        # Push/SMS milestones (Req 12)
 └── Resources/                # Assets, ML models, localizations
 ```
@@ -272,6 +275,38 @@ protocol AfterSalesService {
 - Cannot set `completed` unless `qaChecklist.isComplete` (Req 12.4).
 - Each stage transition triggers a milestone notification (Req 12.6).
 
+### Service: Customer Magic Link (Req 15)
+
+Customers act on after-sales tickets without an account or app via a secure, tokenized link.
+
+```swift
+enum CustomerAction: Codable { case approveEstimate, collectionSignOff }
+
+struct MagicLink: Codable {
+    let token: String          // opaque, unguessable (e.g. signed random)
+    let ticketID: String       // scope: this ticket only
+    let action: CustomerAction // scope: this action only
+    let expiresAt: Date        // configurable, time-limited
+    var consumedAt: Date?      // single-use
+}
+
+protocol CustomerLinkService {
+    func issueLink(ticketID: String, action: CustomerAction) async throws -> MagicLink   // Req 15.1
+    func deliver(_ link: MagicLink, via channel: ContactChannel) async throws            // SMS/email, Req 15.2
+    func resolve(token: String) async throws -> CustomerLinkContext                       // validates, Req 15.3/15.7
+    func submitEstimateDecision(token: String, approved: Bool) async throws               // Req 15.4/15.5
+    func submitCollectionSignOff(token: String, signature: SignatureData) async throws    // Req 15.6
+}
+```
+
+**Design notes:**
+- The link opens a **lightweight, ticket-scoped web view** (hosted page), not the iOS app — no account, password, or install (Req 15.3).
+- Tokens are **single-use and time-limited**; on completion the link is invalidated (Req 15.8, 15.9).
+- Expired/used/invalid tokens are rejected with a clear "request a new link" message (Req 15.7).
+- The resolved context exposes **only** that ticket and action — no broader customer or store data (Req 15.9).
+- Decisions and sign-offs are written back to the ticket and surfaced to the Specialist (Req 15.5), and feed the After-Sales approval gate (Req 12.2) and collection step (Req 12.5).
+- Customer PII used for delivery follows the same consent rules as clienteling (Req 14.2).
+
 ---
 
 ## Data Flow — Key Scenarios
@@ -305,10 +340,10 @@ Manager raises request (SKU, qty, urgency)
 ```
 Specialist raises AST (type + condition photos)
    → verifyWarranty(serial) → active / outOfWarranty / voided / unverifiable
-   → submitEstimate() → client approves/declines digitally
+   → submitEstimate() → magic link sent → client approves/declines digitally (web view)
    → IF approved: advanceStage Received → In Repair → QA Check → Completed
         (Completed blocked until QA checklist complete)
-   → return: schedule pickup/courier, generate docs, digital sign-off
+   → return: schedule pickup/courier, generate docs, magic-link digital sign-off on collection
    → milestone notifications at each step
 ```
 
@@ -336,6 +371,7 @@ Specialist raises AST (type + condition photos)
 | Below-floor price | `PricingError.belowFloor` with minimum shown (Req 6.5) |
 | Payment decline | Preserve cart, no inventory mutation (Req 10.4) |
 | Warranty not found | Mark unverifiable, require manual review (Req 11.4) |
+| Invalid/expired/used magic link | Deny access, show "request a new link" message (Req 15.7) |
 | Auth/session expiry | Lock UI, require re-auth (Req 1.4) |
 
 Errors are modeled as typed `enum` conforming to `Error` and surfaced through ViewModel state, never via force-unwraps.

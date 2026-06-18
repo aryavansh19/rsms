@@ -11,10 +11,13 @@ The system supports **four user roles** with role-based access control (RBAC):
 3. **Sales Associate** (Client Advisor) — clienteling, selling, QR-based inventory updates, AI recommendations, payments.
 4. **After-Sales Specialist** — after-sales tickets, warranty, estimates/approvals, repair tracking, client communication.
 
+Customers are not a logged-in role. Where the after-sales flow requires customer action (approving a repair estimate, signing off on collection), the system reaches the customer through a **secure, tokenized magic link** delivered by SMS/email that opens a lightweight web view — no customer account or app install is required.
+
 Key platform decisions:
 - **QR-code scanning** (not RFID) for all item-level operations, using the Vision framework.
 - **Razorpay** (UPI/netbanking/wallets) plus a physical **card terminal** (tap/swipe) for payments, with digital receipts.
 - **SwiftUI + MVVM + Swift Concurrency**, **Passkeys** authentication, **Core ML** for AI recommendations.
+- **Customer interaction** via secure magic link (tokenized, time-limited, single-use) for estimate approval and collection sign-off only.
 
 ---
 
@@ -208,3 +211,22 @@ Key platform decisions:
 2. WHEN client personal data is handled THEN the system SHALL comply with applicable data-privacy regulations and SHALL honor consent settings.
 3. WHEN any screen is presented THEN the system SHALL support Dynamic Type, VoiceOver labels, and sufficient color contrast.
 4. WHEN authentication occurs THEN the system SHALL use Passkeys and SHALL support a secondary factor where configured.
+
+
+---
+
+### Requirement 15: Customer Interaction via Secure Magic Link
+
+**User Story:** As a customer, I want to approve a repair estimate and confirm collection from a secure link sent to me, so that I can act on my after-sales ticket without creating an account or installing an app.
+
+#### Acceptance Criteria
+
+1. WHEN an After-Sales Specialist sends an estimate or requests collection sign-off THEN the system SHALL generate a unique, tokenized magic link tied to that specific after-sales ticket and action.
+2. WHEN the system generates a magic link THEN the system SHALL deliver it to the customer via the consented channel (SMS or email).
+3. WHEN a customer opens a valid magic link THEN the system SHALL present a lightweight web view scoped only to the relevant ticket, without requiring a customer account, password, or app installation.
+4. WHEN a customer opens an estimate magic link THEN the system SHALL display the itemized estimate (parts, labour, timeline) and SHALL allow the customer to approve or decline.
+5. WHEN a customer approves or declines an estimate via the link THEN the system SHALL record the decision against the ticket and SHALL reflect it to the After-Sales Specialist.
+6. WHEN a customer opens a collection sign-off magic link THEN the system SHALL allow the customer to confirm receipt with a digital sign-off.
+7. IF a magic link is expired, already used, or invalid THEN the system SHALL deny access and SHALL display a clear message instructing the customer to request a new link.
+8. WHEN a magic link action is completed THEN the system SHALL invalidate the link so it cannot be reused.
+9. WHEN a magic link is generated THEN the system SHALL set a configurable expiry (single-use, time-limited) and SHALL NOT expose any data beyond the scope of that ticket and action.

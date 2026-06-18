@@ -76,6 +76,10 @@ This plan converts the design into incremental, test-backed coding tasks. Each t
   - Implement push (APNs) and SMS dispatch for milestone events used by After-Sales.
   - _Requirements: 12.6_
 
+- [ ] 11a. Implement CustomerLinkService (magic link)
+  - Implement tokenized, single-use, time-limited magic-link generation scoped to a ticket + action; delivery via SMS/email; token resolution/validation with expiry and reuse rejection.
+  - _Requirements: 15.1, 15.2, 15.7, 15.8, 15.9_
+
 ---
 
 ## Phase 3 — Admin Module
@@ -167,6 +171,16 @@ This plan converts the design into incremental, test-backed coding tasks. Each t
     - _Requirements: 12.2, 12.3, 12.4_
   - [ ] 24.3 Write tests for the approval gate and QA gate.
     - _Requirements: 12.2, 12.4_
+
+- [ ] 24a. Build the customer magic-link web view
+  - [ ] 24a.1 Build the ticket-scoped web view that resolves a magic-link token and renders only the relevant ticket/action without account or app install.
+    - _Requirements: 15.3_
+  - [ ] 24a.2 Implement estimate approve/decline via link, writing the decision back to the ticket and feeding the After-Sales approval gate.
+    - _Requirements: 15.4, 15.5, 12.2_
+  - [ ] 24a.3 Implement collection sign-off via link, feeding the return/collection step; invalidate the link on completion.
+    - _Requirements: 15.6, 15.8, 12.5_
+  - [ ] 24a.4 Write tests for token validation, single-use invalidation, expiry rejection, and scope limitation.
+    - _Requirements: 15.7, 15.8, 15.9_
 
 - [ ] 25. Returns and client communication
   - [ ] 25.1 Build return scheduling (boutique pickup/courier), documentation generation, and digital sign-off on collection.
