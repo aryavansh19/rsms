@@ -14,6 +14,60 @@ Capacity-based allocation of the 89-story backlog across 3 sprints.
 
 ---
 
+## Capacity Calculation
+
+### Step 1 — Totals
+- Total hours: **840 hrs**
+- Total story points: **262 pts** (exact sum of all 89 stories)
+
+### Step 2 — Raw velocity (simple method)
+```
+Hours per point = 840 ÷ 262 = 3.21 hrs per story point
+```
+(If counted as 270 points, the rate is 840 ÷ 270 = 3.11 hrs/point.)
+
+### Step 3 — Naive proportional split (hours ÷ 3.21)
+| Sprint | Hours | Points (naive) |
+|--------|-------|----------------|
+| 1 | 210 | ~65 |
+| 2 | 350 | ~109 |
+| 3 | 280 | ~87 |
+| Total | 840 | ~262 |
+
+This assumes every hour is spent coding stories.
+
+### Step 4 — Why the real plan differs (overhead split)
+Each sprint loses hours to non-story work; Sprint 1 is hit hardest by one-time setup.
+```
+Total hours (840) = Story-dev hours + Overhead hours
+Story-dev rate    = 2.5 hrs/point (code + unit tests)
+Story-dev hours   = 262 x 2.5 = 655 hrs
+Overhead hours    = 840 - 655 = 185 hrs
+```
+
+### Step 5 — Refined per-sprint calculation
+```
+Sprint points = (Sprint hours - Sprint overhead) / 2.5
+```
+| Sprint | Hours | - Overhead | = Dev hours | / 2.5 = Points |
+|--------|-------|-----------|-------------|----------------|
+| 1 | 210 | 100 (setup) | 110 | 44 |
+| 2 | 350 | 30 (ceremonies, integration) | 320 | 128 |
+| 3 | 280 | 55 (system test, profiling, submissions) | 225 | 90 |
+| Total | 840 | 185 | 655 | 262 |
+
+### Step 6 — Two views side by side
+| Sprint | Hours | Naive (/3.21) | Planned (overhead-adjusted) |
+|--------|-------|---------------|------------------------------|
+| 1 | 210 | 65 | 44 (lower: 100 hrs of setup) |
+| 2 | 350 | 109 | 128 (higher: pure delivery) |
+| 3 | 280 | 87 | 90 (overhead approx submissions) |
+| Total | 840 | 262 | 262 |
+
+**Bottom line:** at a simple rate of ~3.21 hrs/point, Sprint 1 looks like ~65 points; but after reserving ~100 hrs for foundation/setup and developing at 2.5 hrs/point, Sprint 1 realistically holds **44 points**. That 65-vs-44 gap is the infrastructure tax of the first sprint, which is why Sprint 2 absorbs more points (128) than its raw hours alone suggest.
+
+---
+
 ## Sprint 1 — Foundation, Auth & Admin Setup (210 hrs)
 
 **Goal:** Stand up the architecture, role-based login, and the supply side so stores can be created, stocked, and priced.
