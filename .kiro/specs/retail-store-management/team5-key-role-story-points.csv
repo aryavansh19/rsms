@@ -65,7 +65,6 @@ TEAM5-74,Manager,As a Manager I want to delete Staff profile so that the person 
 TEAM5-75,After-Sales,"As an After-Sales Associate, I want to verify a product's authenticity so that counterfeit items are not accepted for service.",5
 TEAM5-76,After-Sales,"As an After-Sales Associate, I want to view a product's service history so that I can understand previous repairs before creating a new request.",3
 TEAM5-77,After-Sales,"As an After-Sales Associate, I want to view pending customer approvals so that I can follow up on delayed responses.",2
-TEAM5-78,After-Sales,"As an After-Sales Associate, I want to schedule customer pickups so that completed items are returned in an organized manner.",2
 TEAM5-79,After-Sales,"As an After-Sales Associate, I want to generate invoices for completed repairs so that customers receive a detailed breakdown of charges.",3
 TEAM5-80,After-Sales,"As an After-Sales Associate, I want to filter repair requests by status so that I can quickly locate specific service cases.",2
 TEAM5-81,After-Sales,"As an After-Sales Associate, I want to view all active service requests so that I can monitor ongoing repair workloads.",2
