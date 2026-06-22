@@ -1,0 +1,462 @@
+Summary,Issue key,Issue id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project lead id,Project description,Priority,Resolution,Assignee,Assignee Id,Reporter,Reporter Id,Creator,Creator Id,Created,Updated,Last Viewed,Resolved,Due date,Votes,Description,Environment,Watchers,Watchers Id,Original estimate,Remaining Estimate,Time Spent,Work Ratio,Σ Original Estimate,Σ Remaining Estimate,Σ Time Spent,Security Level,Custom field (Atlassian Project),Custom field (Development),Custom field (Issue color),Custom field (Rank),Sprint,Custom field (Start date),Custom field (Story point estimate),Custom field (Team),Custom field (Vulnerability),Custom field (Vulnerability),Parent,Parent key,Parent summary,Status Category,Status Category Changed
+"As a Sales Associate, I want to use the app in multiple languages, so that I can serve clients in their preferred language.",TEAM5-89,10124,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,22/Jun/26 11:03 PM,22/Jun/26 11:23 PM,,,,0,,,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,,,,,,,,,,,,0|i000fn:,,,5.0,,,,10041,TEAM5-38,Sales Associate,To Do,22/Jun/26 11:03 PM
+"As a Manager, I want to view an inventory dashboard with stock levels, low-stock alerts, and a one-tap restock request to the Admin, so that I can manage store inventory in one place.",TEAM5-88,10123,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,22/Jun/26 11:02 PM,22/Jun/26 11:23 PM,22/Jun/26 11:02 PM,,,0,,,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,,,,,,,,,,,,0|i00022:z,NIRALI Sprint 1,,3.0,,,,10040,TEAM5-37,Manager,To Do,22/Jun/26 11:02 PM
+"As a Sales Associate, I want to verify a client's digital receipt at BOPIS pickup, so that only the correct person collects the reserved item.",TEAM5-87,10122,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,22/Jun/26 11:01 PM,22/Jun/26 11:23 PM,22/Jun/26 11:02 PM,,,0,,,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,,,,,,,,,,,,0|i000f7:,,,3.0,,,,10041,TEAM5-38,Sales Associate,To Do,22/Jun/26 11:01 PM
+"As an Admin, I want store managers to receive transfer status notifications so that they can prepare for incoming inventory.",TEAM5-86,10089,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 11:32 PM,22/Jun/26 10:21 AM,,,,0,"*Acceptance Criteria*
+
+* Managers receive notifications when transfers are approved.
+* Managers receive notifications when inventory is dispatched.
+* Managers receive notifications when inventory is delivered.
+* Notification includes transfer ID and shipment details.
+* Notification history is retained in the system.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0002e:zr,,,2.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 11:32 PM
+"As an Admin, I want to dispatch approved inventory transfers to stores so that requested products reach their destination.",TEAM5-85,10088,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 11:31 PM,22/Jun/26 11:13 PM,,,,0,"*Acceptance Criteria*
+
+* Admin can dispatch approved transfers.
+* Transfer documentation is generated automatically.
+* Dispatch date and tracking details are recorded.
+* Inventory is deducted from the source location.
+* Destination store is notified of dispatch.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0002e:zi,,,2.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 11:31 PM
+"As an Admin, I want to create purchase orders when warehouse stock is insufficient so that required inventory can be replenished.",TEAM5-84,10087,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 11:31 PM,22/Jun/26 10:22 AM,,,,0,"*Acceptance Criteria*
+
+* Admin can generate a purchase order when inventory is unavailable.
+* Purchase order contains SKU, quantity, supplier, and expected delivery date.
+* Purchase order receives a unique identifier.
+* Order status can be tracked.
+* Purchase order history remains available for audit purposes.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0002e:z,,,3.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 11:31 PM
+"As an Admin, I want to approve transfer requests when sufficient stock is available so that inventory can be dispatched to stores.",TEAM5-83,10086,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 11:31 PM,22/Jun/26 11:22 PM,,,,0,"*Acceptance Criteria*
+
+* Admin can approve requests with sufficient inventory.
+* Approval records date, time, and approver.
+* Approved requests move to the next workflow stage.
+* Managers receive approval notifications.
+* Inventory allocation is reserved upon approval.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00024:i,NIRALI Sprint 1,,3.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 11:31 PM
+"As an Admin, I want to verify warehouse stock availability for requested items so that I can decide whether inventory can be transferred immediately.",TEAM5-82,10085,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 11:31 PM,22/Jun/26 11:22 PM,,,,0,"*Acceptance Criteria*
+
+* Admin can view warehouse stock availability for requested SKUs.
+* Available quantity is displayed in real time.
+* System identifies insufficient stock automatically.
+* Stock verification occurs before transfer approval.
+* Inventory information reflects current warehouse records.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00024:,NIRALI Sprint 1,,2.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 11:31 PM
+"As an After-Sales Associate, I want to view all active service requests so that I can monitor ongoing repair workloads.",TEAM5-81,10084,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,19/Jun/26 11:25 PM,20/Jun/26 2:45 PM,,,,0,"*Acceptance Criteria*
+
+* Active requests are displayed.
+* List updates automatically.
+* Request details can be opened.",,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,,,,,,,,,,,,0|i000ez:,,,2.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 11:25 PM
+"As an After-Sales Associate, I want to filter repair requests by status so that I can quickly locate specific service cases.",TEAM5-80,10083,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,19/Jun/26 11:24 PM,20/Jun/26 2:45 PM,,,,0,"*Acceptance Criteria*
+
+* User can filter by status.
+* Filter results update immediately.
+* Multiple statuses can be selected.",,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,,,,,,,,,,,,0|i000er:,,,2.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 11:24 PM
+"As an After-Sales Associate, I want to generate invoices for completed repairs so that customers receive a detailed breakdown of charges.",TEAM5-79,10082,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,19/Jun/26 11:23 PM,22/Jun/26 10:22 AM,,,,0,"*Acceptance Criteria*
+
+* Invoice contains repair details.
+* Costs are itemized.
+* Invoice can be viewed and downloaded.",,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,,,,,,,,,,,,0|i000ej:,,,3.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 11:23 PM
+"As an After-Sales Associate, I want to view pending customer approvals so that I can follow up on delayed responses.",TEAM5-77,10080,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,19/Jun/26 11:16 PM,22/Jun/26 10:22 AM,,,,0,"*Acceptance Criteria*
+
+* Pending approvals list is displayed.
+* Approval age is visible.
+* User can filter pending requests.",,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,,,,,,,,,,,,0|i000e3:,,,2.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 11:16 PM
+"As an After-Sales Associate, I want to view a product's service history so that I can understand previous repairs before creating a new request.",TEAM5-76,10079,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,19/Jun/26 11:16 PM,22/Jun/26 10:22 AM,,,,0,"*Acceptance Criteria*
+
+* Previous ASTs are displayed.
+* Past repairs are visible.
+* Dates and statuses are shown.",,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,,,,,,,,,,,,0|i000dv:,,,3.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 11:16 PM
+"As an After-Sales Associate, I want to verify a product's authenticity so that counterfeit items are not accepted for service.",TEAM5-75,10078,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,19/Jun/26 11:15 PM,22/Jun/26 10:22 AM,,,,0,"*Acceptance Criteria*
+
+* Product authenticity request can be submitted.
+* Result is recorded.
+* Counterfeit products are flagged.
+* Service cannot continue for rejected items.",,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,,,,,,,,,,,,0|i000dn:,,,5.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 11:15 PM
+As a Manager I want to delete Staff profile so that the person who has resgined is not in the database anymore.,TEAM5-74,10077,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 11:08 PM,22/Jun/26 10:39 PM,,,,0,"Acceptance Criteria
+
+1. Only a Manager can delete a staff profile, and only for associates assigned to their own store.
+2. Before deletion, a confirmation dialog appears with the associate's name. The profile is removed only if the Manager confirms.
+3. If the associate has any open tasks (active appointment, pending order, or open AST ticket), the system blocks deletion and prompts the Manager to reassign or close those tasks first.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00026:xi,NIRALI Sprint 1,,2.0,,,,10040,TEAM5-37,Manager,To Do,19/Jun/26 11:08 PM
+As an Admin I want to delete Manager profile so that the person who has resgined is not in the database anymore.,TEAM5-73,10076,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 11:07 PM,22/Jun/26 10:39 PM,,,,0,"*Acceptance Criteria*
+
+* Admin can deactivate manager accounts.
+* Deactivated managers cannot access the system.
+* Historical assignments and performance records remain available.
+* Store ownership must be reassigned before deactivation.
+* Only Admin users can perform deactivation.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00022:y,NIRALI Sprint 1,,2.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 11:07 PM
+As an Admin I want to remove store profile so that the store which is not operational doesn't reflect in database.,TEAM5-72,10075,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 11:05 PM,22/Jun/26 11:13 PM,,,,0,"*Acceptance Criteria*
+
+* Admin can archive inactive stores.
+* Archived stores no longer appear in operational workflows.
+* Historical sales and inventory records remain accessible.
+* Archived stores cannot process new transactions.
+* Only Admin users can archive stores.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00022:x,NIRALI Sprint 1,,3.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 11:05 PM
+"As a Manager, I want to view event analytics and RSVP reports, so that I can evaluate event performance.",TEAM5-71,10074,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Harman Singh,712020:59abf107-e6f2-43c2-b927-47a4f301b85f,Harman Singh,712020:59abf107-e6f2-43c2-b927-47a4f301b85f,19/Jun/26 10:37 PM,22/Jun/26 10:22 AM,,,,0,"Acceptance Criteria
+
+1.⁠ ⁠System displays total invitations sent.
+2.⁠ ⁠System displays accepted, declined, and pending responses.
+3.⁠ ⁠Manager can view attendance-related statistics.
+4.⁠ ⁠Reports can be filtered by event.
+5.⁠ ⁠Reports can be exported or shared.",,Harman Singh,712020:59abf107-e6f2-43c2-b927-47a4f301b85f,,,,,,,,,,,,0|i0002t:,,,3.0,,,,10040,TEAM5-37,Manager,To Do,19/Jun/26 10:37 PM
+"As a Manager, I want to track RSVP responses (Accepted, Declined, Pending), so that I can estimate event attendance.",TEAM5-70,10073,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Harman Singh,712020:59abf107-e6f2-43c2-b927-47a4f301b85f,Harman Singh,712020:59abf107-e6f2-43c2-b927-47a4f301b85f,19/Jun/26 10:37 PM,22/Jun/26 10:22 AM,,,,0,"Acceptance Criteria
+
+1.⁠ ⁠System records RSVP responses.
+2.⁠ ⁠RSVP status is displayed as Accepted, Declined, or Pending.
+3.⁠ ⁠Manager can view RSVP status for each invited customer.
+4.⁠ ⁠Manager can filter responses by RSVP status.
+5.⁠ ⁠RSVP information is updated whenever responses are received.",,Harman Singh,712020:59abf107-e6f2-43c2-b927-47a4f301b85f,,,,,,,,,,,,0|i0002r:,,,2.0,,,,10040,TEAM5-37,Manager,To Do,19/Jun/26 10:37 PM
+"As an Admin, I want to receive and review transfer requests raised by managers, so that I can evaluate stock needs across the network.",TEAM5-68,10071,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 7:31 PM,22/Jun/26 11:12 PM,,,,0,"*Acceptance Criteria*
+
+* Admin can view all transfer requests submitted by managers.
+* Request details include SKU, quantity, urgency, source, and destination.
+* Requests can be filtered by status.
+* Request history remains visible after review.
+* Admin can approve or reject a request.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00022:v,NIRALI Sprint 1,,2.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 7:31 PM
+"As an Admin, I want to set a minimum floor price per SKU per currency, so that managers cannot discount below a level that protects brand value and margins.",TEAM5-67,10070,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 7:31 PM,22/Jun/26 10:39 PM,,,,0,"*Acceptance Criteria*
+
+* Admin can define a floor price per SKU and currency.
+* Floor price cannot exceed the base price.
+* Managers cannot save prices below the floor price.
+* System displays validation messages when rules are violated.
+* Updated floor prices take effect immediately.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00022:r,NIRALI Sprint 1,,3.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 7:31 PM
+"As an Admin, I want to create a new SKU with product details and define its launch date, so that the product is catalogued and ready for distribution.",TEAM5-66,10069,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 7:30 PM,22/Jun/26 10:39 PM,,,,0,"*Acceptance Criteria*
+
+* Admin can create a SKU with name, category, description, and price.
+* SKU identifier must be unique.
+* Launch date must be today or a future date.
+* Product details are saved successfully.
+* Created SKU appears in the product catalog.
+* SKU can be assigned to target stores.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00022:i,NIRALI Sprint 1,,3.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 7:30 PM
+"As an Admin, I want to filter the revenue dashboard by country, so that I can analyse performance across specific geographies.",TEAM5-65,10068,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 7:29 PM,22/Jun/26 10:21 AM,,,,0,"*Acceptance Criteria*
+
+* Admin can filter revenue data by country.
+* Multiple countries can be selected simultaneously.
+* Dashboard updates automatically after filter selection.
+* Filtered data matches underlying sales records.
+* Filters can be cleared without page refresh.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0002d:,,,2.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 7:29 PM
+"As an After-Sales Specialist I want to log in with my credentials, so that I can access only the features and data relevant to my role.",TEAM5-63,10066,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 7:23 PM,22/Jun/26 10:21 AM,,,,0,"*Acceptance Criteria*
+
+* Valid users can log in.
+* Invalid credentials show error.
+* After-Sales users only see authorized features.
+* Session remains active until logout.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i000cr:,,,3.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 7:23 PM
+"As a Sales Associate I want to log in with my credentials, so that I can access only the features and data relevant to my role.",TEAM5-62,10065,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 7:23 PM,22/Jun/26 10:05 PM,,,,0,"Acceptance Criteria:
+
+* Sales Associate can log in using valid credentials.
+* System validates the entered username/email and password.
+* System displays an error message when invalid credentials are entered.
+* System prevents login when required login fields are empty.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00026:y,NIRALI Sprint 1,,3.0,,,,10041,TEAM5-38,Sales Associate,To Do,19/Jun/26 7:23 PM
+"As a Manager, I want to log in with my credentials, so that I can access only the features and data relevant to my role.",TEAM5-61,10064,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 7:22 PM,22/Jun/26 9:52 PM,,,,0,"Acceptance Criteria
+
+1.⁠ ⁠Manager can log in using valid credentials.
+2.⁠ ⁠System displays an error message for invalid credentials.
+3.⁠ ⁠Manager is redirected to the dashboard after successful login.
+4.⁠ ⁠Only manager-authorized features are accessible.
+5.⁠ ⁠User session remains active until logout.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00026:x,NIRALI Sprint 1,,3.0,,,,10040,TEAM5-37,Manager,To Do,19/Jun/26 7:22 PM
+"As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role.",TEAM5-60,10063,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 7:21 PM,22/Jun/26 11:28 PM,22/Jun/26 2:39 PM,,,0,"*Acceptance Criteria*
+
+# Admin can log in using valid credentials (email and password).
+# System displays an error message for invalid credentials.
+# Admin is redirected to the Admin Dashboard after successful login.
+# Only Admin-authorised features (store management, pricing, transfers, revenue) are accessible.
+# User session remains active until logout",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0000o:,NIRALI Sprint 1,,5.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 7:21 PM
+"As an Admin, I want the manager profile view to be read-only, so that performance records cannot be altered.",TEAM5-58,10061,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Harman Singh,712020:59abf107-e6f2-43c2-b927-47a4f301b85f,Harman Singh,712020:59abf107-e6f2-43c2-b927-47a4f301b85f,19/Jun/26 5:47 PM,22/Jun/26 10:39 PM,,,,0,"*Acceptance Criteria*
+
+* Admin can view manager profile information.
+* Performance metrics are displayed in read-only mode.
+* Editing controls are unavailable.
+* Historical performance data remains unchanged.
+* Unauthorized modifications are prevented.",,Harman Singh,712020:59abf107-e6f2-43c2-b927-47a4f301b85f,,,,,,,,,,,,0|i00021:,NIRALI Sprint 1,,1.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 5:47 PM
+"As an After-Sales Specialist, I want declined repairs to skip the repair workflow and go directly to return/pickup scheduling, so that the client can retrieve their item without delay.",TEAM5-57,10060,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 3:20 PM,22/Jun/26 10:21 AM,,,,0,"*Acceptance Criteria*
+
+* Rejected estimates bypass repair stages.
+* Return scheduling becomes available.
+* Status changes to Awaiting Return.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i000cn:,,,2.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 3:20 PM
+"As an After-Sales Specialist, I want the repair to proceed only after client approval, so that we avoid disputes over unauthorised work.",TEAM5-56,10059,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 3:19 PM,20/Jun/26 2:43 PM,,,,0,"*Acceptance Criteria*
+
+* Repair cannot start before approval.
+* Approved estimates unlock repair workflow.
+* Rejected estimates remain blocked.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i000cf:,,,3.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 3:19 PM
+"As an After-Sales Specialist, I want to send the cost estimate to the client digitally for approval or decline, so that no work begins without the client's consent.",TEAM5-55,10058,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 3:19 PM,22/Jun/26 10:21 AM,,,,0,"*Acceptance Criteria*
+
+* Estimate can be sent digitally.
+* Approval link/status is generated.
+* Approval response is recorded.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i000c7:,,,3.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 3:19 PM
+"As an After-Sales Specialist, I want to generate an itemised cost estimate (parts + labour + timeline), so that the client knows exactly what the repair will cost and how long it will take.",TEAM5-54,10057,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 3:19 PM,22/Jun/26 10:21 AM,,,,0,"*Acceptance Criteria*
+
+* Parts cost can be entered.
+* Labour cost can be entered.
+* Total cost is calculated automatically.
+* Estimated timeline is displayed.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i000bz:,,,3.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 3:19 PM
+"As an After-Sales Specialist, I want to scan a final packaging QR before releasing the item, so that inventory records are updated and the AST is closed accurately.",TEAM5-53,10056,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 3:19 PM,20/Jun/26 2:42 PM,,,,0,"*Acceptance Criteria*
+
+* Packaging QR can be scanned.
+* AST status updates to Closed.
+* Inventory record is updated.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i000br:,,,3.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 3:19 PM
+"As an After-Sales Specialist, I want the client to digitally sign off on collection, so that we have proof of delivery and the ticket can be formally closed.",TEAM5-52,10055,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 3:18 PM,22/Jun/26 10:21 AM,,,,0,"*Acceptance Criteria*
+
+* Client can sign digitally.
+* Signature is stored securely.
+* Ticket status changes to Closed after sign-off.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i000bj:,,,3.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 3:18 PM
+"As an After-Sales Specialist, I want to generate return documentation for the completed service, so that there is a formal record of the handover.",TEAM5-51,10054,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 3:17 PM,22/Jun/26 10:21 AM,,,,0,"*Acceptance Criteria*
+
+* Return document is generated.
+* AST details are included.
+* Document can be viewed or downloaded.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i000bb:,,,2.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 3:17 PM
+"As an After-Sales Specialist, I want to schedule a store pickup or courier for completed items so that customers can conveniently receive their products.",TEAM5-50,10053,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 3:14 PM,22/Jun/26 10:21 AM,,,,0,"*Acceptance Criteria*
+
+* Pickup option available.
+* Courier option available.
+* Date/time scheduling available.
+* Schedule recorded in system.
+* Customer notified.
+* Pickup queue organized for store staff.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i000b3:,,,3.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 3:14 PM
+"As an After-Sales Specialist, I want to send items back to repair if they fail the QA check, so that issues are resolved before the client receives the product.",TEAM5-49,10052,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 3:08 PM,22/Jun/26 10:21 AM,,,,0,"*Acceptance Criteria*
+
+* Failed QA items return to repair stage.
+* Reason for failure is recorded.
+* Repair team is notified.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i000av:,,,2.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 3:08 PM
+"As an After-Sales Specialist, I want a mandatory QA checklist to be completed before marking a repair as done, so that no item is returned to the client without quality verification.",TEAM5-48,10051,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 3:07 PM,22/Jun/26 10:21 AM,,,,0,"*Acceptance Criteria*
+
+* Checklist must be completed.
+* Repair cannot be marked completed until QA passes.
+* QA results are stored.
+* Failed items are flagged.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i000an:,,,3.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 3:07 PM
+"As an After-Sales Specialist, I want to track a repair through defined stages, so that the progress is transparent and auditable.",TEAM5-47,10050,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 3:07 PM,22/Jun/26 10:21 AM,,,,0,"*Acceptance Criteria*
+
+* Status can be updated.
+* Status history is recorded.
+* Current status is visible.
+* Invalid status transitions are blocked.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i000af:,,,3.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 3:07 PM
+"As an After-Sales Specialist, I want the system to flag out-of-warranty or voided coverage clearly, so that the client is informed upfront about potential costs.",TEAM5-46,10049,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 3:07 PM,20/Jun/26 2:40 PM,,,,0,"*Acceptance Criteria*
+
+* Expired warranty shows warning.
+* Void warranty displays clear message.
+* Warning is visible before estimate creation.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i000a7:,,,2.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 3:07 PM
+"As an After-Sales Specialist, I want to validate whether the product's warranty is still active, so that I can flag it as a warranty repair (free) or a paid repair.",TEAM5-45,10048,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 3:04 PM,20/Jun/26 2:40 PM,,,,0,"*Acceptance Criteria*
+
+* Warranty status is displayed.
+* Expiry date is shown.
+* Warranty repairs are identified.
+* Expired warranties are flagged.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0009z:,,,3.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 3:04 PM
+"As an After-Sales Specialist, I want to create an after-sales ticket (AST) tagged with the correct service type (exchange, return, repair, warranty), so that the ticket follows the right workflow.",TEAM5-44,10047,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 2:50 PM,22/Jun/26 10:21 AM,,,,0,"*Acceptance Criteria*
+
+* AST ID is auto-generated.
+* Service type is mandatory.
+* Ticket is saved successfully.
+* Ticket status defaults to ""Received"".",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0009r:,,,3.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 2:50 PM
+"As an After-Sales Specialist, I want to capture condition photos and a diagnostic report in-app at intake, so that the item's state is documented before any work begins.",TEAM5-43,10046,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 2:49 PM,22/Jun/26 10:21 AM,,,,0,"*Acceptance Criteria*
+
+* User can upload multiple photos.
+* Diagnostic notes can be entered.
+* Photos and notes are linked to AST.
+* Uploaded files can be viewed later.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0009j:,,,3.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 2:49 PM
+"As an After-Sales Specialist, I want to pull the client's purchase history linked to the product, so that I have full context on the original transaction.",TEAM5-42,10045,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 2:48 PM,22/Jun/26 10:21 AM,,,,0,"*Acceptance Criteria*
+
+* Purchase history is displayed after product lookup.
+* Previous purchases are visible.
+* Associated client information is shown.
+* System handles missing purchase records.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0009b:,,,2.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 2:48 PM
+"As an After-Sales Specialist, I want to manually enter product details if the QR scan fails, so that I can still create a ticket for items with damaged labels.",TEAM5-41,10044,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 2:47 PM,22/Jun/26 10:21 AM,,,,0,"*Acceptance Criteria*
+
+* User can manually enter product details.
+* Required fields are validated.
+* Ticket can be created without QR scan.
+* Entered data is saved successfully.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00093:,,,2.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 2:47 PM
+"As an After-Sales Specialist, I want to scan a product's QR code to look up the item, so that I can quickly identify the product and pull its records.",TEAM5-40,10043,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 2:44 PM,20/Jun/26 2:38 PM,22/Jun/26 11:12 AM,,,0,"*Acceptance Criteria*
+
+* User can open QR scanner.
+* Valid QR retrieves product details.
+* Invalid QR displays an error message.
+* Product information is displayed within 3 seconds.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0008v:,,,3.0,,,,10042,TEAM5-39,After Sales,To Do,19/Jun/26 2:44 PM
+After Sales,TEAM5-39,10042,Epic,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,19/Jun/26 2:36 PM,19/Jun/26 2:36 PM,,,,0,,,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,,,,,,,,,,,yellow,0|i0008n:,,,,,,,,,,To Do,19/Jun/26 2:36 PM
+Sales Associate,TEAM5-38,10041,Epic,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,19/Jun/26 2:35 PM,19/Jun/26 2:35 PM,,,,0,,,Prakhar Manu,712020:8792614a-1248-4d5b-b571-a82b6010870e,,,,,,,,,,,green,0|i0008f:,,,,,,,,,,To Do,19/Jun/26 2:35 PM
+Manager,TEAM5-37,10040,Epic,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,19/Jun/26 2:33 PM,19/Jun/26 2:35 PM,19/Jun/26 2:34 PM,,,0,,,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,,,,,,,,,,,blue,0|i00087:,,,,,,,,,,To Do,19/Jun/26 2:33 PM
+Admin,TEAM5-36,10039,Epic,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,19/Jun/26 2:26 PM,19/Jun/26 2:36 PM,19/Jun/26 2:35 PM,,,0,,,Aryavansh Saini,712020:a9c59d4f-02cd-4a6b-bc04-055ceaa3e1a7,,,,,,,,,,,orange,0|i0007z:,NIRALI Sprint 1,,,,,,,,,To Do,19/Jun/26 2:26 PM
+"As a Sales Associate, I want to route the completed order as a store sale, BOPIS reservation, or ship-from-warehouse, so that the correct fulfilment process is triggered based on the order type.",TEAM5-35,10038,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:45 PM,22/Jun/26 10:21 AM,,,,0,"Acceptance Criteria:
+
+* System identifies the selected fulfilment type.
+* Appropriate fulfilment workflow is initiated.
+* Inventory is updated according to the fulfilment type.
+* Customer receives order confirmation.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0007r:,,,3.0,,,,10041,TEAM5-38,Sales Associate,To Do,19/Jun/26 12:45 PM
+"As a Sales Associate, I want to process payments via card terminal (tap/swipe), so that clients can pay with credit or debit cards.",TEAM5-34,10037,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:43 PM,22/Jun/26 10:21 AM,19/Jun/26 3:28 PM,,,0,"Acceptance Criteria:
+
+* Card payments support tap, swipe, or chip transactions.
+* Transaction is completed only after successful payment authorization.
+* Digital receipt is generated after successful payment.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0007j:,,,3.0,,,,10041,TEAM5-38,Sales Associate,To Do,19/Jun/26 12:43 PM
+"As a Sales Associate, I want to take payment via Razorpay and issue a digital receipt, so that checkout is fast and compliant.",TEAM5-33,10036,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:43 PM,22/Jun/26 3:27 PM,19/Jun/26 3:28 PM,,,0,"Acceptance Criteria:
+
+* Payment can be completed using Razorpay-supported payment methods.
+* Payment must be successful before order completion.
+* Digital receipt is generated and shared with the client.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0007b:,,,5.0,,,,10041,TEAM5-38,Sales Associate,To Do,19/Jun/26 12:43 PM
+"As a Sales Associate, I want the system to suggest similar alternative products when the desired item is unavailable, so that I can still serve the client without losing the sale.",TEAM5-32,10035,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:41 PM,22/Jun/26 10:21 AM,19/Jun/26 3:28 PM,,,0,"Acceptance Criteria:
+
+* Alternative products are displayed when the selected item is unavailable.
+* Alternatives belong to the same product category.
+* Associate can select an alternative product for the client.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00073:,,,3.0,,,,10041,TEAM5-38,Sales Associate,To Do,19/Jun/26 12:41 PM
+"As a Sales Associate, I want to scan a product's QR code at the point of sale, so that both the client's purchase history and the store's inventory records are updated simultaneously in one action.",TEAM5-31,10034,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:41 PM,22/Jun/26 10:21 AM,22/Jun/26 10:49 PM,,,0,"Acceptance Criteria:
+
+* Product is identified successfully by scanning the QR code.
+* Product is added to the current transaction.
+* Store inventory is updated after successful payment.
+* Client purchase history is updated after the sale.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0006v:,,,8.0,,,,10041,TEAM5-38,Sales Associate,To Do,19/Jun/26 12:41 PM
+"As a Sales Associate, I want to check inventory availability (in-store, warehouse, nearby stores) before presenting a product, so that I don't recommend items that are out of stock.",TEAM5-30,10033,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:41 PM,22/Jun/26 10:21 AM,19/Jun/26 3:27 PM,,,0,"Acceptance Criteria:
+
+* Inventory availability is displayed for the current store.
+* Warehouse inventory is displayed.
+* Nearby store inventory is displayed.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0006n:,,,3.0,,,,10041,TEAM5-38,Sales Associate,To Do,19/Jun/26 12:41 PM
+"As a Sales Associate, I want the system to suggest higher-value alternatives at the cart stage, so that I can offer upsell options that match the client's taste.",TEAM5-29,10032,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:40 PM,22/Jun/26 10:21 AM,19/Jun/26 3:27 PM,,,0,"Acceptance Criteria:
+
+* Higher-value alternatives are displayed for eligible products.
+* Associate decides whether to recommend the alternatives.
+* Selected alternative is added to the cart.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0006f:,,,3.0,,,,10041,TEAM5-38,Sales Associate,To Do,19/Jun/26 12:40 PM
+"As a Sales Associate, I want the system to surface complementary products at the cart stage, so that I can suggest cross-sell options to the client.",TEAM5-28,10031,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:39 PM,22/Jun/26 10:21 AM,19/Jun/26 3:27 PM,,,0,"Acceptance Criteria:
+
+* Complementary products are displayed based on cart contents.
+* Associate can add recommended products to the cart.
+* Customer may accept or decline the recommendation.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00067:,,,3.0,,,,10041,TEAM5-38,Sales Associate,To Do,19/Jun/26 12:39 PM
+"As a Sales Associate, I want the system to suggest trending and similar products for new clients with no purchase history, so that I can still offer relevant options.",TEAM5-27,10030,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:37 PM,22/Jun/26 10:21 AM,19/Jun/26 3:27 PM,,,0,"Acceptance Criteria:
+
+* System displays trending and similar products for new clients.
+* Recommendations are shown even when no purchase history exists.
+* Associate selects which products to recommend.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0005z:,,,3.0,,,,10041,TEAM5-38,Sales Associate,To Do,19/Jun/26 12:37 PM
+"As a Sales Associate, I want the system to generate product recommendations based on a client's purchase patterns and preferences, so that I have data-driven suggestions to present.",TEAM5-26,10029,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:36 PM,22/Jun/26 10:21 AM,22/Jun/26 10:49 PM,,,0,"Acceptance Criteria:
+
+* Recommendations are generated based on the client's purchase history and preferences.
+* Associate can review recommendations before presenting them.
+* Associate decides which recommendations to share with the client.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0005r:,,,8.0,,,,10041,TEAM5-38,Sales Associate,To Do,19/Jun/26 12:36 PM
+"As a Sales Associate, I want to create ship-from-warehouse orders for remote selling, so that products not available in-store can be shipped directly to the client.",TEAM5-25,10028,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:36 PM,22/Jun/26 10:21 AM,19/Jun/26 3:26 PM,,,0,"Acceptance Criteria:
+
+* Associate can create a ship-from-warehouse order.
+* Warehouse availability is verified before order confirmation.
+* Shipping details are recorded.
+* Order is forwarded for warehouse fulfilment.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0005j:,,,3.0,,,,10041,TEAM5-38,Sales Associate,To Do,19/Jun/26 12:36 PM
+"As a Sales Associate, I want to manage BOPIS (Buy Online Pick Up In Store) pickup alerts, so that I can prepare the order and notify the client when it's ready for collection.",TEAM5-24,10027,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:35 PM,22/Jun/26 10:21 AM,19/Jun/26 3:26 PM,,,0,"Acceptance Criteria:
+
+* System displays pending BOPIS pickup orders.
+* Associate can mark an order as ready for pickup.
+* Client is notified when the order is ready.
+* Associate can mark the order as collected after pickup.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0005b:,,,3.0,,,,10041,TEAM5-38,Sales Associate,To Do,19/Jun/26 12:35 PM
+"As a Sales Associate, I want to conduct a video consultation and share curated cart links with the client remotely, so that clients can shop without visiting the store.",TEAM5-23,10026,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:34 PM,22/Jun/26 10:21 AM,19/Jun/26 3:26 PM,,,0,"Acceptance Criteria:
+
+* Associate can initiate a video consultation.
+* Curated cart link can be generated.
+* Client receives the curated cart link.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00053:,,,8.0,,,,10041,TEAM5-38,Sales Associate,To Do,19/Jun/26 12:34 PM
+"As a Sales Associate, I want to book an in-store or video call appointment for a client, so that I can provide a scheduled, personalised consultation.",TEAM5-22,10025,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:30 PM,22/Jun/26 10:21 AM,19/Jun/26 3:26 PM,,,0,"Acceptance Criteria:
+
+* Associate can select the appointment type (in-store or video call).
+* Appointment date and time are recorded.
+* Appointment is successfully scheduled for the client.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0004v:,,,3.0,,,,10041,TEAM5-38,Sales Associate,To Do,19/Jun/26 12:30 PM
+"As a Sales Associate, I want to search for an existing client in the CRM by name or phone number, so that I can quickly pull up their profile when they visit.",TEAM5-21,10024,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:26 PM,22/Jun/26 10:21 AM,19/Jun/26 3:26 PM,,,0,"Acceptance Criteria:
+
+* Associate can search using either the client's name or phone number.
+* Matching client records are displayed.
+* Selecting a client opens the corresponding client profile",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0004n:,,,2.0,,,,10041,TEAM5-38,Sales Associate,To Do,19/Jun/26 12:26 PM
+"As a Sales Associate, I want to create a new client card with basic consented details (name, phone number, style preferences), so that I can start building a personalised shopping experience.",TEAM5-20,10023,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:25 PM,22/Jun/26 10:21 AM,19/Jun/26 3:25 PM,,,0,"Acceptance Criteria:
+
+* Associate can enter the client's name, phone number, and style preferences.
+* Client consent is obtained before the profile is saved.
+* A client card is created successfully with the provided details.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0004f:,,,3.0,,,,10041,TEAM5-38,Sales Associate,To Do,19/Jun/26 12:25 PM
+"As a Manager, I want to adjust the selling price of products within the pricing band defined by the Admin so that I can respond to local market conditions while complying with corporate pricing policies.",TEAM5-19,10022,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:21 PM,22/Jun/26 9:50 PM,,,,0,"Acceptance Criteria
+
+1.⁠ ⁠Manager can select a product and enter a new selling price.
+2.⁠ ⁠System displays the allowed pricing range.
+3.⁠ ⁠Price can be saved only within the approved band.
+4.⁠ ⁠Updated prices are reflected in the system after saving.
+5.⁠ ⁠All price changes are recorded for audit purposes.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00026:i,NIRALI Sprint 1,,3.0,,,,10040,TEAM5-37,Manager,To Do,19/Jun/26 12:21 PM
+"As a Manager, I want the system to block me from saving a price below the Admin's floor, so that I cannot breach corporate pricing policy accidentally.",TEAM5-18,10021,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:21 PM,22/Jun/26 9:50 PM,,,,0,"Acceptance Criteria
+
+1.⁠ ⁠System validates the entered price before saving.
+2.⁠ ⁠System blocks prices below the Admin-defined floor price.
+3.⁠ ⁠System blocks prices above the maximum allowed limit.
+4.⁠ ⁠System displays an appropriate validation message when limits are exceeded.
+5.⁠ ⁠No price update is saved until a valid price is entered.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00026:,NIRALI Sprint 1,,2.0,,,,10040,TEAM5-37,Manager,To Do,19/Jun/26 12:21 PM
+"As a Manager, I want to monitor the approval status of my stock requests so that I know when requested inventory will be allocated or delivered to my store.",TEAM5-17,10020,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:20 PM,22/Jun/26 11:10 PM,,,,0,"Acceptance Criteria
+
+1.⁠ ⁠Manager can view all submitted stock requests.
+2.⁠ ⁠System displays the current status of each request.
+3.⁠ ⁠Statuses include Pending, Approved, Rejected, Allocated, and Delivered.
+4.⁠ ⁠Status updates are reflected automatically.
+5.⁠ ⁠Rejected requests display the rejection reason.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0003r:,,,5.0,,,,10040,TEAM5-37,Manager,To Do,19/Jun/26 12:20 PM
+"As a Manager, I want low-stock items to be flagged automatically for reorder, so that I can take action before the product runs out.",TEAM5-16,10019,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:18 PM,22/Jun/26 9:50 PM,,,,0,"Acceptance Criteria
+
+1.⁠ ⁠System monitors inventory levels automatically.
+2.⁠ ⁠Items below the reorder threshold are flagged.
+3.⁠ ⁠Low-stock items are clearly highlighted.
+4.⁠ ⁠Inventory status updates when stock levels change.
+5.⁠ ⁠Manager can view a list of all low-stock items.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00025:,NIRALI Sprint 1,,3.0,,,,10040,TEAM5-37,Manager,To Do,19/Jun/26 12:18 PM
+"⁠As a Manager, I want to raise stock requests by specifying the Stock Keeping Unit (SKU), required quantity, and urgency level so that the Admin can replenish inventory through inter-store transfers or warehouse stock before products run out.",TEAM5-15,10018,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:16 PM,22/Jun/26 9:49 PM,,,,0,"Acceptance Criteria
+
+1.⁠ ⁠Manager can create a stock request by entering SKU, quantity, urgency level, and reason.
+2.⁠ ⁠SKU, quantity, and urgency level are mandatory fields.
+3.⁠ ⁠Requested quantity must be greater than zero.
+4.⁠ ⁠System generates a unique request ID.
+5.⁠ ⁠Request is successfully submitted to the Admin.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00023:,NIRALI Sprint 1,,3.0,,,,10040,TEAM5-37,Manager,To Do,19/Jun/26 12:16 PM
+"As a Manager, I want to view performance metrics, units sold, upsell rate, and client satisfaction score of the sales associate so that I can evaluate employee performance.",TEAM5-14,10017,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:13 PM,22/Jun/26 10:21 AM,22/Jun/26 11:04 AM,,,0,"Acceptance Criteria
+
+1.⁠ ⁠Manager can view performance metrics for sales associates.
+2.⁠ ⁠System displays units sold, upsell rate, and client satisfaction score.
+3.⁠ ⁠Metrics are calculated using current data.
+4.⁠ ⁠Manager can filter metrics by employee.
+5.⁠ ⁠Manager can filter metrics by date range.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00033:,,,3.0,,,,10040,TEAM5-37,Manager,To Do,19/Jun/26 12:13 PM
+"As a Manager, I want to review shift histories so that I can monitor employee attendance.",TEAM5-13,10016,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:06 PM,22/Jun/26 10:21 AM,,,,0,"Acceptance Criteria
+
+1.⁠ ⁠Manager can view shift history for employees.
+2.⁠ ⁠Shift records display date, start time, and end time.
+3.⁠ ⁠Manager can search or filter records by employee.
+4.⁠ ⁠Historical records are retained for reference.
+5.⁠ ⁠Only employees from the manager’s store are displayed.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0002v:,,,2.0,,,,10040,TEAM5-37,Manager,To Do,19/Jun/26 12:06 PM
+"As a Manager, I want to send digital invitations to selected customers, so that they can be informed about upcoming events.",TEAM5-12,10015,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:02 PM,22/Jun/26 10:21 AM,,,,0,"Acceptance Criteria
+
+1.⁠ ⁠Manager can select one or more customers for invitation.
+2.⁠ ⁠System sends invitations with event details.
+3.⁠ ⁠Invitation status is recorded by the system.
+4.⁠ ⁠Manager receives confirmation after sending invitations.
+5.⁠ ⁠Manager can filter customers based on preferences such as purchase history, or loyalty status.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0002n:,,,2.0,,,,10040,TEAM5-37,Manager,To Do,19/Jun/26 12:02 PM
+"As a Manager, I want to create a VIP or launch event with name, date, time, venue, and description, so that the event is formally scheduled.",TEAM5-11,10014,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 12:00 PM,22/Jun/26 10:21 AM,22/Jun/26 11:04 AM,,,0,"Acceptance Criteria
+
+1.⁠ ⁠Manager can create an event by entering name, date, time, venue, and description.
+2.⁠ ⁠Event name, date, time, and venue are mandatory fields.
+3.⁠ ⁠System validates that the event date and time are in the future.
+4.⁠ ⁠Event details are saved successfully.
+5.⁠ ⁠Created events appear in the event list.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0002f:,,,3.0,,,,10040,TEAM5-37,Manager,To Do,19/Jun/26 12:00 PM
+"As an Admin, I want to view a cross-store revenue dashboard with monthly breakdowns, so that I can monitor business performance at a glance.",TEAM5-10,10013,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 11:54 AM,22/Jun/26 10:21 AM,,,,0,"*Acceptance Criteria*
+
+* Admin can view revenue across all stores.
+* Monthly revenue breakdown is displayed.
+* Dashboard data reflects completed transactions only.
+* Revenue figures update automatically when new sales occur.
+* Dashboard loads within acceptable response time.
+* Revenue data can be exported.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i00027:,,,5.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 11:54 AM
+"As an Admin, I want to view each manager’s currently assigned store, so that I know who is responsible for which location at any time.",TEAM5-9,10012,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 11:53 AM,22/Jun/26 9:49 PM,,,,0,"*Acceptance Criteria*
+
+* Admin can view the currently assigned manager for each store.
+* Manager details include name, contact information, and assignment date.
+* Information is displayed in read-only mode.
+* Store list can be searched and filtered.
+* Changes to assignments are reflected immediately.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0001z:,NIRALI Sprint 1,,2.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 11:53 AM
+"As an Admin, I want to assign a manager when creating a store, so that the store has operational ownership from day one.",TEAM5-8,10011,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 11:50 AM,22/Jun/26 11:09 PM,21/Jun/26 3:59 PM,,,0,"*Acceptance Criteria*
+
+* Admin can assign an active manager to a store.
+* Only eligible managers appear in the selection list.
+* Store can have only one primary manager at a time.
+* Assignment changes are saved successfully.
+* Assigned manager receives a notification.
+* Assignment history is retained.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0001f:,NIRALI Sprint 1,,2.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 11:50 AM
+"As an Admin, I want to configure payment terminals (Razorpay and card) for a new store, so that the store can accept payments from day one.",TEAM5-7,10010,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 11:44 AM,22/Jun/26 9:49 PM,19/Jun/26 2:28 PM,,,0,"*Acceptance Criteria*
+
+* Admin can enable Razorpay and card payment terminals for a store.
+* Required payment configuration details must be provided.
+* Invalid configuration values are rejected.
+* Payment configuration status is visible to Admin.
+* Store cannot process payments until at least one terminal is configured.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0001j:,NIRALI Sprint 1,,8.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 11:44 AM
+"As an Admin, I want to assign a locale, currency, and timezone to each store, so that all transactions, reports, and communications reflect the store’s local context.",TEAM5-6,10009,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 11:34 AM,22/Jun/26 9:49 PM,19/Jun/26 2:30 PM,,,0,"*Acceptance Criteria*
+
+# Admin can select locale, currency, and timezone during store setup.
+# Only supported locales and currencies are displayed.
+# Changes are saved successfully.
+# Store transactions use the assigned currency.
+# Reports display dates and times according to the assigned timezone.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0001b:,NIRALI Sprint 1,,2.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 11:34 AM
+"As an Admin, I want to create a new store profile with name, address, and contact details, so that the store is registered in the system and visible across the platform.",TEAM5-2,10005,Story,To Do,TEAM5,Team_5,software,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,Medium,,,,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,19/Jun/26 11:14 AM,22/Jun/26 11:04 PM,22/Jun/26 10:53 PM,,,0,"*Acceptance Criteria*
+
+# Admin can create a store by entering name, address, and contact details.
+# All three fields (name, address, contact) are mandatory. The form cannot be submitted if any field is empty.
+# The newly created store appears in the store list across the platform immediately after creation.
+# A duplicate store name under the same region is not allowed; the system displays an error.
+# Admin receives a confirmation message upon successful store creation.",,Nirali Garg,712020:359e5d09-e56c-41ff-967f-c8b8b4a2ada4,,,,,,,,,,,,0|i0000p:,NIRALI Sprint 1,,8.0,,,,10039,TEAM5-36,Admin,To Do,19/Jun/26 11:14 AM
