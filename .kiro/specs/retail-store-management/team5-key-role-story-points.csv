@@ -20,14 +20,14 @@ TEAM5-22,Sales Associate,"As a Sales Associate, I want to book an in-store or vi
 TEAM5-23,Sales Associate,"As a Sales Associate, I want to conduct a video consultation and share curated cart links with the client remotely, so that clients can shop without visiting the store.",8
 TEAM5-24,Sales Associate,"As a Sales Associate, I want to manage BOPIS (Buy Online Pick Up In Store) pickup alerts, so that I can prepare the order and notify the client when it's ready for collection.",3
 TEAM5-25,Sales Associate,"As a Sales Associate, I want to create ship-from-warehouse orders for remote selling, so that products not available in-store can be shipped directly to the client.",3
-TEAM5-26,Sales Associate,"As a Sales Associate, I want the system to generate product recommendations based on a client's purchase patterns and preferences, so that I have data-driven suggestions to present.",13
+TEAM5-26,Sales Associate,"As a Sales Associate, I want the system to generate product recommendations based on a client's purchase patterns and preferences, so that I have data-driven suggestions to present.",8
 TEAM5-27,Sales Associate,"As a Sales Associate, I want the system to suggest trending and similar products for new clients with no purchase history, so that I can still offer relevant options.",3
 TEAM5-28,Sales Associate,"As a Sales Associate, I want the system to surface complementary products at the cart stage, so that I can suggest cross-sell options to the client.",3
 TEAM5-29,Sales Associate,"As a Sales Associate, I want the system to suggest higher-value alternatives at the cart stage, so that I can offer upsell options that match the client's taste.",3
 TEAM5-30,Sales Associate,"As a Sales Associate, I want to check inventory availability (in-store, warehouse, nearby stores) before presenting a product, so that I don't recommend items that are out of stock.",3
-TEAM5-31,Sales Associate,"As a Sales Associate, I want to scan a product's QR code at the point of sale, so that both the client's purchase history and the store's inventory records are updated simultaneously in one action.",13
+TEAM5-31,Sales Associate,"As a Sales Associate, I want to scan a product's QR code at the point of sale, so that both the client's purchase history and the store's inventory records are updated simultaneously in one action.",8
 TEAM5-32,Sales Associate,"As a Sales Associate, I want the system to suggest similar alternative products when the desired item is unavailable, so that I can still serve the client without losing the sale.",3
-TEAM5-33,Sales Associate,"As a Sales Associate, I want to take payment via Razorpay and issue a digital receipt, so that checkout is fast and compliant.",13
+TEAM5-33,Sales Associate,"As a Sales Associate, I want to take payment via Razorpay and issue a digital receipt, so that checkout is fast and compliant.",8
 TEAM5-34,Sales Associate,"As a Sales Associate, I want to process payments via card terminal (tap/swipe), so that clients can pay with credit or debit cards.",3
 TEAM5-35,Sales Associate,"As a Sales Associate, I want to route the completed order as a store sale, BOPIS reservation, or ship-from-warehouse, so that the correct fulfilment process is triggered based on the order type.",3
 TEAM5-40,After-Sales,"As an After-Sales Specialist, I want to scan a product's QR code to look up the item, so that I can quickly identify the product and pull its records.",3
@@ -49,7 +49,7 @@ TEAM5-55,After-Sales,"As an After-Sales Specialist, I want to send the cost esti
 TEAM5-56,After-Sales,"As an After-Sales Specialist, I want the repair to proceed only after client approval, so that we avoid disputes over unauthorised work.",3
 TEAM5-57,After-Sales,"As an After-Sales Specialist, I want declined repairs to skip the repair workflow and go directly to return/pickup scheduling, so that the client can retrieve their item without delay.",2
 TEAM5-58,Admin,"As an Admin, I want the manager profile view to be read-only, so that performance records cannot be altered.",1
-TEAM5-60,Admin,"As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role.",13
+TEAM5-60,Admin,"As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role.",8
 TEAM5-61,Manager,"As a Manager, I want to log in with my credentials, so that I can access only the features and data relevant to my role.",2
 TEAM5-62,Sales Associate,"As a Sales Associate I want to log in with my credentials, so that I can access only the features and data relevant to my role.",2
 TEAM5-63,After-Sales,"As an After-Sales Specialist I want to log in with my credentials, so that I can access only the features and data relevant to my role.",2

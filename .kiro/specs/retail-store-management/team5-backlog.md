@@ -4,37 +4,37 @@
 
 **Estimation basis:** effort + tech stack + feature difficulty. One-time setup/infrastructure is **baked into the first-of-subsystem feature stories** (no separate developer-setup stories), per review feedback.
 
-**Scale:** Fibonacci 1/2/3/5/8/13. Baseline = TEAM5-58 (1 pt); reference = TEAM5-2 (now 8 pts, since it carries the data layer).
+**Scale:** Fibonacci 1/2/3/5/8 (capped at 8). Baseline = TEAM5-58 (1 pt); reference = TEAM5-2 (8 pts, carries the data layer).
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
 | Total stories | 74 |
-| Total story points | 255 |
+| Total story points | 235 |
 | Must / Should / Could | 39 / 32 / 3 |
-| Points 1/2/3/5/8/13 | 1 / 26 / 37 / 3 / 3 / 4 |
+| Points 1/2/3/5/8 | 1 / 26 / 37 / 3 / 7 |
 
 ## Sprint Capacity Plan
 
 Total capacity = 693 hrs (Week 1: 189, Week 2: 283.5, Week 3: 220.5). 
-Velocity = 693 / 255 = **2.72 hrs per story point** (setup absorbed into points, so points track hours directly).
+Velocity = 693 / 235 = **2.95 hrs per story point** (blended; setup absorbed into points).
 
 | Sprint | Theme | Stories | Points | Capacity (hrs) | Points x rate |
 |--------|-------|---------|--------|----------------|---------------|
-| 1 | Foundation + setup-heavy stories | 22 | 69 | 189.0 | 187.5 |
-| 2 | Commerce + transfers + AI/payments | 21 | 104 | 283.5 | 282.6 |
-| 3 | After-sales + events + submissions | 31 | 82 | 220.5 | 222.8 |
-| **Total** | | **74** | **255** | **693** | **693** |
+| 1 | Foundation + setup-heavy stories | 22 | 64 | 189.0 | 188.7 |
+| 2 | Commerce + transfers + events | 26 | 96 | 283.5 | 283.1 |
+| 3 | After-sales + analytics + submissions | 26 | 75 | 220.5 | 221.2 |
+| **Total** | | **74** | **235** | **693** | **693** |
 
-_Setup is embedded in: TEAM5-60 (auth+app scaffold, 13), TEAM5-2 (data layer, 8), TEAM5-7 (payment config, 5), TEAM5-86 (notification infra, 5), TEAM5-10 (charting, 8), TEAM5-31 (QR/Vision+atomic, 13), TEAM5-33 (Razorpay payment infra, 13), TEAM5-26 (Core ML, 13)._
+_Setup embedded in: TEAM5-60 (auth+scaffold, 8), TEAM5-2 (data layer, 8), TEAM5-7 (payment config, 5), TEAM5-86 (notification infra, 5), TEAM5-10 (charting, 8), TEAM5-31 (QR/Vision+atomic, 8), TEAM5-33 (Razorpay, 8), TEAM5-26 (Core ML, 8). Scale capped at 8._
 
-## Sprint 1 (22 stories, 69 pts)
+## Sprint 1 (22 stories, 64 pts)
 
 | Key | Role | User Story | Epic | Pts |
 |-----|------|-----------|------|-----|
 | TEAM5-9 | Admin | As an Admin, I want to view each manager’s currently assigned store, so that I know who is responsible for which location at any time. | Analytics & Oversight | 2 |
-| TEAM5-60 | Admin | As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 13 |
+| TEAM5-60 | Admin | As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 8 |
 | TEAM5-61 | Manager | As a Manager, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 2 |
 | TEAM5-62 | Sales Associate | As a Sales Associate I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 2 |
 | TEAM5-63 | After-Sales | As an After-Sales Specialist I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 2 |
@@ -56,33 +56,38 @@ _Setup is embedded in: TEAM5-60 (auth+app scaffold, 13), TEAM5-2 (data layer, 8)
 | TEAM5-72 | Admin | As an Admin I want to remove store profile so that the store which is not operational doesn't reflect in database. | Store Onboarding | 3 |
 | TEAM5-8 | Admin | As an Admin, I want to assign a manager when creating a store, so that the store has operational ownership from day one. | Store Onboarding | 2 |
 
-## Sprint 2 (21 stories, 104 pts)
+## Sprint 2 (26 stories, 96 pts)
 
 | Key | Role | User Story | Epic | Pts |
 |-----|------|-----------|------|-----|
-| TEAM5-26 | Sales Associate | As a Sales Associate, I want the system to generate product recommendations based on a client's purchase patterns and preferences, so that I have data-driven suggestions to present. | AI Recommendations | 13 |
+| TEAM5-26 | Sales Associate | As a Sales Associate, I want the system to generate product recommendations based on a client's purchase patterns and preferences, so that I have data-driven suggestions to present. | AI Recommendations | 8 |
 | TEAM5-27 | Sales Associate | As a Sales Associate, I want the system to suggest trending and similar products for new clients with no purchase history, so that I can still offer relevant options. | AI Recommendations | 3 |
 | TEAM5-28 | Sales Associate | As a Sales Associate, I want the system to surface complementary products at the cart stage, so that I can suggest cross-sell options to the client. | AI Recommendations | 3 |
 | TEAM5-29 | Sales Associate | As a Sales Associate, I want the system to suggest higher-value alternatives at the cart stage, so that I can offer upsell options that match the client's taste. | AI Recommendations | 3 |
 | TEAM5-32 | Sales Associate | As a Sales Associate, I want the system to suggest similar alternative products when the desired item is unavailable, so that I can still serve the client without losing the sale. | AI Recommendations | 3 |
-| TEAM5-10 | Admin | As an Admin, I want to view a cross-store revenue dashboard with monthly breakdowns, so that I can monitor business performance at a glance. | Analytics & Oversight | 8 |
 | TEAM5-20 | Sales Associate | As a Sales Associate, I want to create a new client card with basic consented details (name, phone number, style preferences), so that I can start building a personalised shopping experience. | Clienteling & Appointments | 3 |
 | TEAM5-21 | Sales Associate | As a Sales Associate, I want to search for an existing client in the CRM by name or phone number, so that I can quickly pull up their profile when they visit. | Clienteling & Appointments | 2 |
 | TEAM5-22 | Sales Associate | As a Sales Associate, I want to book an in-store or video call appointment for a client, so that I can provide a scheduled, personalised consultation. | Clienteling & Appointments | 3 |
 | TEAM5-23 | Sales Associate | As a Sales Associate, I want to conduct a video consultation and share curated cart links with the client remotely, so that clients can shop without visiting the store. | Clienteling & Appointments | 8 |
 | TEAM5-24 | Sales Associate | As a Sales Associate, I want to manage BOPIS (Buy Online Pick Up In Store) pickup alerts, so that I can prepare the order and notify the client when it's ready for collection. | Clienteling & Appointments | 3 |
 | TEAM5-25 | Sales Associate | As a Sales Associate, I want to create ship-from-warehouse orders for remote selling, so that products not available in-store can be shipped directly to the client. | Clienteling & Appointments | 3 |
+| TEAM5-11 | Manager | As a Manager, I want to create a VIP or launch event with name, date, time, venue, and description, so that the event is formally scheduled. | Events & Staff | 3 |
+| TEAM5-12 | Manager | As a Manager, I want to send digital invitations to selected customers, so that they can be informed about upcoming events. | Events & Staff | 2 |
+| TEAM5-13 | Manager | As a Manager, I want to review shift histories so that I can monitor employee attendance. | Events & Staff | 2 |
+| TEAM5-14 | Manager | As a Manager, I want to view performance metrics, units sold, upsell rate, and client satisfaction score of the sales associate so that I can evaluate employee performance. | Events & Staff | 3 |
+| TEAM5-70 | Manager | As a Manager, I want to track RSVP responses (Accepted, Declined, Pending), so that I can estimate event attendance. | Events & Staff | 2 |
+| TEAM5-71 | Manager | As a Manager, I want to view event analytics and RSVP reports, so that I can evaluate event performance. | Events & Staff | 3 |
 | TEAM5-83 | Admin | As an Admin, I want to approve transfer requests when sufficient stock is available so that inventory can be dispatched to stores. | Inter-store Transfers | 3 |
 | TEAM5-84 | Admin | As an Admin, I want to create purchase orders when warehouse stock is insufficient so that required inventory can be replenished. | Inter-store Transfers | 3 |
 | TEAM5-85 | Admin | As an Admin, I want to dispatch approved inventory transfers to stores so that requested products reach their destination. | Inter-store Transfers | 3 |
 | TEAM5-86 | Admin | As an Admin, I want store managers to receive transfer status notifications so that they can prepare for incoming inventory. | Inter-store Transfers | 5 |
 | TEAM5-30 | Sales Associate | As a Sales Associate, I want to check inventory availability (in-store, warehouse, nearby stores) before presenting a product, so that I don't recommend items that are out of stock. | Sell, QR & Payments | 3 |
-| TEAM5-31 | Sales Associate | As a Sales Associate, I want to scan a product's QR code at the point of sale, so that both the client's purchase history and the store's inventory records are updated simultaneously in one action. | Sell, QR & Payments | 13 |
-| TEAM5-33 | Sales Associate | As a Sales Associate, I want to take payment via Razorpay and issue a digital receipt, so that checkout is fast and compliant. | Sell, QR & Payments | 13 |
+| TEAM5-31 | Sales Associate | As a Sales Associate, I want to scan a product's QR code at the point of sale, so that both the client's purchase history and the store's inventory records are updated simultaneously in one action. | Sell, QR & Payments | 8 |
+| TEAM5-33 | Sales Associate | As a Sales Associate, I want to take payment via Razorpay and issue a digital receipt, so that checkout is fast and compliant. | Sell, QR & Payments | 8 |
 | TEAM5-34 | Sales Associate | As a Sales Associate, I want to process payments via card terminal (tap/swipe), so that clients can pay with credit or debit cards. | Sell, QR & Payments | 3 |
 | TEAM5-35 | Sales Associate | As a Sales Associate, I want to route the completed order as a store sale, BOPIS reservation, or ship-from-warehouse, so that the correct fulfilment process is triggered based on the order type. | Sell, QR & Payments | 3 |
 
-## Sprint 3 (31 stories, 82 pts)
+## Sprint 3 (26 stories, 75 pts)
 
 | Key | Role | User Story | Epic | Pts |
 |-----|------|-----------|------|-----|
@@ -98,17 +103,12 @@ _Setup is embedded in: TEAM5-60 (auth+app scaffold, 13), TEAM5-2 (data layer, 8)
 | TEAM5-77 | After-Sales | As an After-Sales Associate, I want to view pending customer approvals so that I can follow up on delayed responses. | After-Sales Workload Views | 2 |
 | TEAM5-80 | After-Sales | As an After-Sales Associate, I want to filter repair requests by status so that I can quickly locate specific service cases. | After-Sales Workload Views | 2 |
 | TEAM5-81 | After-Sales | As an After-Sales Associate, I want to view all active service requests so that I can monitor ongoing repair workloads. | After-Sales Workload Views | 2 |
+| TEAM5-10 | Admin | As an Admin, I want to view a cross-store revenue dashboard with monthly breakdowns, so that I can monitor business performance at a glance. | Analytics & Oversight | 8 |
 | TEAM5-65 | Admin | As an Admin, I want to filter the revenue dashboard by country, so that I can analyse performance across specific geographies. | Analytics & Oversight | 2 |
 | TEAM5-54 | After-Sales | As an After-Sales Specialist, I want to generate an itemised cost estimate (parts + labour + timeline), so that the client knows exactly what the repair will cost and how long it will take. | Estimate & Approval | 3 |
 | TEAM5-55 | After-Sales | As an After-Sales Specialist, I want to send the cost estimate to the client digitally for approval or decline, so that no work begins without the client's consent. | Estimate & Approval | 3 |
 | TEAM5-56 | After-Sales | As an After-Sales Specialist, I want the repair to proceed only after client approval, so that we avoid disputes over unauthorised work. | Estimate & Approval | 3 |
 | TEAM5-57 | After-Sales | As an After-Sales Specialist, I want declined repairs to skip the repair workflow and go directly to return/pickup scheduling, so that the client can retrieve their item without delay. | Estimate & Approval | 2 |
-| TEAM5-11 | Manager | As a Manager, I want to create a VIP or launch event with name, date, time, venue, and description, so that the event is formally scheduled. | Events & Staff | 3 |
-| TEAM5-12 | Manager | As a Manager, I want to send digital invitations to selected customers, so that they can be informed about upcoming events. | Events & Staff | 2 |
-| TEAM5-13 | Manager | As a Manager, I want to review shift histories so that I can monitor employee attendance. | Events & Staff | 2 |
-| TEAM5-14 | Manager | As a Manager, I want to view performance metrics, units sold, upsell rate, and client satisfaction score of the sales associate so that I can evaluate employee performance. | Events & Staff | 3 |
-| TEAM5-70 | Manager | As a Manager, I want to track RSVP responses (Accepted, Declined, Pending), so that I can estimate event attendance. | Events & Staff | 2 |
-| TEAM5-71 | Manager | As a Manager, I want to view event analytics and RSVP reports, so that I can evaluate event performance. | Events & Staff | 3 |
 | TEAM5-47 | After-Sales | As an After-Sales Specialist, I want to track a repair through defined stages, so that the progress is transparent and auditable. | Repair & QA | 3 |
 | TEAM5-48 | After-Sales | As an After-Sales Specialist, I want a mandatory QA checklist to be completed before marking a repair as done, so that no item is returned to the client without quality verification. | Repair & QA | 3 |
 | TEAM5-49 | After-Sales | As an After-Sales Specialist, I want to send items back to repair if they fail the QA check, so that issues are resolved before the client receives the product. | Repair & QA | 2 |

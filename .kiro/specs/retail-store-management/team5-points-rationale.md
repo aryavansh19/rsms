@@ -1,21 +1,20 @@
 # TEAM5 Story Points - Rationale
 
-Why each of the 74 stories got its value (effort + tech stack + difficulty; setup baked into first-of-subsystem stories). Scale 1/2/3/5/8/13.
+Why each of the 74 stories got its value (effort + tech stack + difficulty; setup baked into first-of-subsystem stories). Scale 1/2/3/5/8 (capped at 8).
 
-Total: 74 stories, 255 points.
+Total: 74 stories, 235 points.
 
 ## Admin
-
 | Key | Story | Pts | Rationale |
 |-----|-------|-----|-----------|
-| TEAM5-2 | As an Admin, I want to create a new store profile with name, address, and contact details, so that the store is registered in the system and visible across the platform. | 8 | First persistence story - absorbs the data layer (SwiftData + Supabase + sync) and base CRUD scaffolding on top of the store form. >5 for the embedded infra; <13 (less than the auth bootstrap). |
+| TEAM5-2 | As an Admin, I want to create a new store profile with name, address, and contact details, so that the store is registered in the system and visible across the platform. | 8 | First persistence story - absorbs the data layer (SwiftData + Supabase + sync) + base CRUD scaffolding on top of the store form. Top of scale (8); >5 for embedded infra. |
 | TEAM5-6 | As an Admin, I want to assign a locale, currency, and timezone to each store, so that all transactions, reports, and communications reflect the store’s local context. | 2 | Config fields (locale/currency/timezone) on an existing store. >1 because it affects downstream formatting/reports; <3 because it is selection + storage, no new logic. |
-| TEAM5-7 | As an Admin, I want to configure payment terminals (Razorpay and card) for a new store, so that the store can accept payments from day one. | 5 | Payment-terminal config that also stands up the payment configuration model later used by Razorpay/card. >3 for the embedded setup; <8 (config, not the integration). |
+| TEAM5-7 | As an Admin, I want to configure payment terminals (Razorpay and card) for a new store, so that the store can accept payments from day one. | 5 | Payment-terminal config that also stands up the payment configuration model used later by Razorpay/card. >3 for embedded setup; <8 (config, not integration). |
 | TEAM5-8 | As an Admin, I want to assign a manager when creating a store, so that the store has operational ownership from day one. | 2 | A single relational link (store->manager) via a picker. >1 because a store must have an owner (constraint); <3 because there is no workflow. |
 | TEAM5-9 | As an Admin, I want to view each manager’s currently assigned store, so that I know who is responsible for which location at any time. | 2 | Read-only lookup of each manager's current store. >1 (needs a query/join + search); <3 (display only, no logic). |
-| TEAM5-10 | As an Admin, I want to view a cross-store revenue dashboard with monthly breakdowns, so that I can monitor business performance at a glance. | 8 | Revenue dashboard - absorbs charting/visualization component setup plus cross-store aggregation. >5 for embedded chart infra; <13. |
+| TEAM5-10 | As an Admin, I want to view a cross-store revenue dashboard with monthly breakdowns, so that I can monitor business performance at a glance. | 8 | Revenue dashboard - absorbs charting/visualization component setup + cross-store aggregation. Top of scale (8); >5. |
 | TEAM5-58 | As an Admin, I want the manager profile view to be read-only, so that performance records cannot be altered. | 1 | Pure display with edit controls removed - the simplest possible item, hence 1 (nothing below it). |
-| TEAM5-60 | As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | 13 | First auth story - absorbs one-time setup: Passkey + RBAC framework, app scaffold (MVVM/DI/navigation), Keychain/session, on top of the login feature. 13 because it bootstraps the whole app; >8 due to embedded infrastructure. |
+| TEAM5-60 | As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | 8 | Bootstraps the app - Passkey + RBAC framework + scaffold (MVVM/DI/navigation) + Keychain - on top of the login feature. Top of the scale (8); true effort exceeds a typical 8 but the scale is capped at 8. |
 | TEAM5-65 | As an Admin, I want to filter the revenue dashboard by country, so that I can analyse performance across specific geographies. | 2 | A country filter on an existing dashboard. >1 (recompute + UI control); <3 (no new data or logic). |
 | TEAM5-66 | As an Admin, I want to create a new SKU with product details and define its launch date, so that the product is catalogued and ready for distribution. | 3 | SKU form + uniqueness + launch-date validation + cataloguing. >2 for the rules; <5 because asset push lives in a separate concern. |
 | TEAM5-67 | As an Admin, I want to set a minimum floor price per SKU per currency, so that managers cannot discount below a level that protects brand value and margins. | 3 | Per-currency price-band data model + floor constraint enforced downstream. >2 for the model + rule; <5 because enforcement logic sits in the pricing service. |
@@ -26,10 +25,9 @@ Total: 74 stories, 255 points.
 | TEAM5-83 | As an Admin, I want to approve transfer requests when sufficient stock is available so that inventory can be dispatched to stores. | 3 | Approval that checks stock and routes from a source store. >2 (conditional logic + state change); <5 (no multi-store optimisation). |
 | TEAM5-84 | As an Admin, I want to create purchase orders when warehouse stock is insufficient so that required inventory can be replenished. | 3 | PO form + supplier, triggered when stock is insufficient. >2 (trigger condition + form); <5 (standard CRUD). |
 | TEAM5-85 | As an Admin, I want to dispatch approved inventory transfers to stores so that requested products reach their destination. | 3 | State transition + source decrement + in-transit marking. >2 (inventory mutation logic); <5 (single, well-defined transition). |
-| TEAM5-86 | As an Admin, I want store managers to receive transfer status notifications so that they can prepare for incoming inventory. | 5 | First notification story - absorbs the push/SMS notification infrastructure. >2 because the messaging pipeline is built here; later notifications reuse it cheaply. |
+| TEAM5-86 | As an Admin, I want store managers to receive transfer status notifications so that they can prepare for incoming inventory. | 5 | First notification story - absorbs the push/SMS notification infrastructure. >2 because the messaging pipeline is built here; later notifications reuse it. |
 
 ## Manager
-
 | Key | Story | Pts | Rationale |
 |-----|-------|-----|-----------|
 | TEAM5-11 | As a Manager, I want to create a VIP or launch event with name, date, time, venue, and description, so that the event is formally scheduled. | 3 | Event form + scheduling + optional link to an Admin launch. >2 (relations + scheduling); <5 (standard CRUD). |
@@ -47,7 +45,6 @@ Total: 74 stories, 255 points.
 | TEAM5-74 | As a Manager I want to delete Staff profile so that the person who has resgined is not in the database anymore. | 2 | Soft-delete + audit of a staff record. >1 (confirmation/audit); <3 (single entity). |
 
 ## Sales Associate
-
 | Key | Story | Pts | Rationale |
 |-----|-------|-----|-----------|
 | TEAM5-20 | As a Sales Associate, I want to create a new client card with basic consented details (name, phone number, style preferences), so that I can start building a personalised shopping experience. | 3 | Client form + consent gate that controls whether PII is persisted. >2 (conditional persistence); <5 (single form). |
@@ -56,20 +53,19 @@ Total: 74 stories, 255 points.
 | TEAM5-23 | As a Sales Associate, I want to conduct a video consultation and share curated cart links with the client remotely, so that clients can shop without visiting the store. | 8 | Real-time video consultation + remote shareable curated-cart link. >5 because real-time media + remote session is high-risk integration - top tier (8). |
 | TEAM5-24 | As a Sales Associate, I want to manage BOPIS (Buy Online Pick Up In Store) pickup alerts, so that I can prepare the order and notify the client when it's ready for collection. | 3 | BOPIS alert + order prep + notify-when-ready workflow. >2 (workflow + notification); <5 (bounded). |
 | TEAM5-25 | As a Sales Associate, I want to create ship-from-warehouse orders for remote selling, so that products not available in-store can be shipped directly to the client. | 3 | Order created against warehouse stock + shipping details. >2 (cross-location order); <5 (standard order flow). |
-| TEAM5-26 | As a Sales Associate, I want the system to generate product recommendations based on a client's purchase patterns and preferences, so that I have data-driven suggestions to present. | 13 | AI recommendations - Core ML model + inference pipeline + feature/data prep (first ML subsystem). 13: top tier due to ML infrastructure; >8. |
+| TEAM5-26 | As a Sales Associate, I want the system to generate product recommendations based on a client's purchase patterns and preferences, so that I have data-driven suggestions to present. | 8 | AI recommendations - Core ML model + inference pipeline + data prep (first ML subsystem). Top of scale (8) due to tech-stack difficulty; >5. |
 | TEAM5-27 | As a Sales Associate, I want the system to suggest trending and similar products for new clients with no purchase history, so that I can still offer relevant options. | 3 | Cold-start trending/similar fallback for new clients. >2 (model/heuristic); <5 (simpler fallback than the full pattern engine). |
 | TEAM5-28 | As a Sales Associate, I want the system to surface complementary products at the cart stage, so that I can suggest cross-sell options to the client. | 3 | Surface complementary items at the cart stage. >2 (cart-context logic); <5 (reuses recommendation engine). |
 | TEAM5-29 | As a Sales Associate, I want the system to suggest higher-value alternatives at the cart stage, so that I can offer upsell options that match the client's taste. | 3 | Surface higher-value alternatives at the cart stage. >2 (cart-context logic); <5 (reuses recommendation engine). |
 | TEAM5-30 | As a Sales Associate, I want to check inventory availability (in-store, warehouse, nearby stores) before presenting a product, so that I don't recommend items that are out of stock. | 3 | Real-time availability across in-store/warehouse/nearby. >2 (multi-source query); <5 (read aggregation). |
-| TEAM5-31 | As a Sales Associate, I want to scan a product's QR code at the point of sale, so that both the client's purchase history and the store's inventory records are updated simultaneously in one action. | 13 | QR sale dual-update - first Vision/QR scanner infrastructure + atomic inventory+history transaction + concurrency. 13: top tier; >8 (embedded scanner infra + atomicity). |
+| TEAM5-31 | As a Sales Associate, I want to scan a product's QR code at the point of sale, so that both the client's purchase history and the store's inventory records are updated simultaneously in one action. | 8 | QR sale dual-update - first Vision/QR scanner infra + atomic inventory+history transaction + concurrency. Top of scale (8); >5. |
 | TEAM5-32 | As a Sales Associate, I want the system to suggest similar alternative products when the desired item is unavailable, so that I can still serve the client without losing the sale. | 3 | Suggest alternatives when the item is unavailable. >2 (conditional path); <5 (reuses recommendations). |
-| TEAM5-33 | As a Sales Associate, I want to take payment via Razorpay and issue a digital receipt, so that checkout is fast and compliant. | 13 | Razorpay - external payment SDK integration + compliance + digital receipt (first payment subsystem). 13: top tier; >8 (embedded payment infra). |
+| TEAM5-33 | As a Sales Associate, I want to take payment via Razorpay and issue a digital receipt, so that checkout is fast and compliant. | 8 | Razorpay - external payment SDK + compliance + digital receipt (first payment subsystem). Top of scale (8); >5. |
 | TEAM5-34 | As a Sales Associate, I want to process payments via card terminal (tap/swipe), so that clients can pay with credit or debit cards. | 3 | Card-terminal (tap/swipe) integration capturing the result. >2 (hardware integration); kept <5/8 because result handling is more bounded than the Razorpay SDK flow. |
 | TEAM5-35 | As a Sales Associate, I want to route the completed order as a store sale, BOPIS reservation, or ship-from-warehouse, so that the correct fulfilment process is triggered based on the order type. | 3 | Branch the completed order into 3 fulfilment flows. >2 (multi-path routing); <5 (each path defined elsewhere). |
 | TEAM5-62 | As a Sales Associate I want to log in with my credentials, so that I can access only the features and data relevant to my role. | 2 | Reuses the auth framework from TEAM5-60; only role-scoping differs. 2 - lighter than a standard feature. |
 
 ## After-Sales
-
 | Key | Story | Pts | Rationale |
 |-----|-------|-----|-----------|
 | TEAM5-40 | As an After-Sales Specialist, I want to scan a product's QR code to look up the item, so that I can quickly identify the product and pull its records. | 3 | Vision QR scan + record retrieval. >2 (scan + lookup); <5 (scan infra reused from sales). |
