@@ -73,3 +73,6 @@ TEAM5-83,Admin,"As an Admin, I want to approve transfer requests when sufficient
 TEAM5-84,Admin,"As an Admin, I want to create purchase orders when warehouse stock is insufficient so that required inventory can be replenished.",3
 TEAM5-85,Admin,"As an Admin, I want to dispatch approved inventory transfers to stores so that requested products reach their destination.",3
 TEAM5-86,Admin,"As an Admin, I want store managers to receive transfer status notifications so that they can prepare for incoming inventory.",2
+TEAM5-87,Sales Associate,"As a Sales Associate, I want to verify a client's digital receipt at BOPIS pickup so that only the correct person collects the reserved item.",3
+TEAM5-88,Manager,"As a Manager, I want an inventory dashboard showing stock levels and low-stock alerts, from which I can raise a restock request to the Admin, so that I can manage store inventory in one place.",3
+TEAM5-89,Sales Associate,"As a Sales Associate, I want to use the app in multiple languages, so that I can serve clients in their preferred language.",5

@@ -1,8 +1,8 @@
 # TEAM5 Story Points - Rationale
 
-Why each of the 74 stories got its value (effort + tech stack + difficulty). Scale 1/2/3/5/8. Setup is baked only into Sprint 1 (TEAM5-60, TEAM5-2).
+Why each of the 77 stories got its value (effort + tech stack + difficulty). Scale 1/2/3/5/8. Setup baked only into Sprint 1 (TEAM5-60, TEAM5-2).
 
-Total: 74 stories, 227 points.
+Total: 77 stories, 238 points.
 
 ## Admin
 | Key | Story | Pts | Rationale |
@@ -43,6 +43,7 @@ Total: 74 stories, 227 points.
 | TEAM5-70 | As a Manager, I want to track RSVP responses (Accepted, Declined, Pending), so that I can estimate event attendance. | 2 | RSVP status capture per invitee + counts. >1 (per-invitee state); <3 (simple tracking). |
 | TEAM5-71 | As a Manager, I want to view event analytics and RSVP reports, so that I can evaluate event performance. | 3 | Aggregated invites/RSVP/attendance report + export. >2 (aggregation + export); <5 (reporting on existing data). |
 | TEAM5-74 | As a Manager I want to delete Staff profile so that the person who has resgined is not in the database anymore. | 2 | Soft-delete + audit of a staff record. >1 (confirmation/audit); <3 (single entity). |
+| TEAM5-88 | As a Manager, I want an inventory dashboard showing stock levels and low-stock alerts, from which I can raise a restock request to the Admin, so that I can manage store inventory in one place. | 3 | Inventory overview dashboard composing existing stock data, low-stock alerts, and a restock-request action. 3 - mainly UI composition + wiring over existing inventory features (TEAM5-15/16/17); not 5 since the underlying logic already exists. |
 
 ## Sales Associate
 | Key | Story | Pts | Rationale |
@@ -64,6 +65,8 @@ Total: 74 stories, 227 points.
 | TEAM5-34 | As a Sales Associate, I want to process payments via card terminal (tap/swipe), so that clients can pay with credit or debit cards. | 3 | Card-terminal (tap/swipe) integration capturing the result. >2 (hardware integration); kept <5/8 because result handling is more bounded than the Razorpay SDK flow. |
 | TEAM5-35 | As a Sales Associate, I want to route the completed order as a store sale, BOPIS reservation, or ship-from-warehouse, so that the correct fulfilment process is triggered based on the order type. | 3 | Branch the completed order into 3 fulfilment flows. >2 (multi-path routing); <5 (each path defined elsewhere). |
 | TEAM5-62 | As a Sales Associate I want to log in with my credentials, so that I can access only the features and data relevant to my role. | 3 | Login reusing the auth framework built in TEAM5-60. 3 - standard role-scoped login; setup cost carried by TEAM5-60. |
+| TEAM5-87 | As a Sales Associate, I want to verify a client's digital receipt at BOPIS pickup so that only the correct person collects the reserved item. | 3 | Receipt-vs-reservation validation + identity match + handover gate. >2 (matching + block logic); <5. Pure feature. |
+| TEAM5-89 | As a Sales Associate, I want to use the app in multiple languages, so that I can serve clients in their preferred language. | 5 | Multi-language localization across associate-facing screens: i18n framework + string catalog + locale-aware UI. 5 for breadth across screens; <8 (store-locale groundwork from TEAM5-6 exists). |
 
 ## After-Sales
 | Key | Story | Pts | Rationale |

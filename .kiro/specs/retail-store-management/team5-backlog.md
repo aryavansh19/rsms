@@ -1,33 +1,33 @@
 # TEAM5 Backlog - Estimated & Sprint-Planned
 
-74 user stories from `team5_user_stories_only.txt` (TEAM5-78 removed), keyed by Jira ID.
+77 user stories (TEAM5-78 removed; TEAM5-87/88/89 added at bottom), keyed by Jira ID.
 
-**Estimation basis:** effort + tech stack + feature difficulty, scale 1/2/3/5/8 (capped at 8).
+**Estimation basis:** effort + tech stack + feature difficulty, scale 1/2/3/5/8.
 
-**Setup rule:** one-time project/git/architecture setup is baked **only into Sprint 1** - specifically TEAM5-60 (auth + app scaffold) and TEAM5-2 (data layer). Sprints 2 & 3 are pure feature estimates. (QR/AI/Razorpay sit at 8 for tech difficulty, not setup.)
+**Setup rule:** one-time project/git/architecture setup is baked **only into Sprint 1** (TEAM5-60 auth+scaffold, TEAM5-2 data layer). Sprints 2 & 3 are pure feature estimates.
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
-| Total stories | 74 |
-| Total story points | 227 |
-| Must / Should / Could | 39 / 32 / 3 |
-| Points 1/2/3/5/8 | 1 / 24 / 41 / 3 / 5 |
+| Total stories | 77 |
+| Total story points | 238 |
+| Must / Should / Could | 40 / 34 / 3 |
+| Points 1/2/3/5/8 | 1 / 24 / 43 / 4 / 5 |
 
 ## Sprint Capacity Plan
 
 Total = 693 hrs (Week 1: 189, Week 2: 283.5, Week 3: 220.5). 
-Velocity = 693 / 227 = **3.05 hrs per story point**.
+Velocity = 693 / 238 = **2.91 hrs per story point**.
 
 | Sprint | Theme | Stories | Points | Capacity (hrs) | Points x rate |
 |--------|-------|---------|--------|----------------|---------------|
-| 1 | Foundation + setup (60 & 2 carry setup) | 22 | 62 | 189.0 | 189.3 |
-| 2 | Commerce + transfers + events | 26 | 93 | 283.5 | 283.9 |
-| 3 | After-sales + analytics + submissions | 26 | 72 | 220.5 | 219.8 |
-| **Total** | | **74** | **227** | **693** | **693** |
+| 1 | Foundation + setup + mgr inventory dashboard | 23 | 65 | 189.0 | 189.3 |
+| 2 | Commerce + transfers + events + BOPIS verify | 27 | 96 | 283.5 | 279.5 |
+| 3 | After-sales + analytics + localization | 27 | 77 | 220.5 | 224.2 |
+| **Total** | | **77** | **238** | **693** | **693** |
 
-## Sprint 1 (22 stories, 62 pts)
+## Sprint 1 (23 stories, 65 pts)
 
 | Key | Role | User Story | Epic | Pts |
 |-----|------|-----------|------|-----|
@@ -39,6 +39,7 @@ Velocity = 693 / 227 = **3.05 hrs per story point**.
 | TEAM5-68 | Admin | As an Admin, I want to receive and review transfer requests raised by managers, so that I can evaluate stock needs across the network. | Inter-store Transfers | 2 |
 | TEAM5-82 | Admin | As an Admin, I want to verify warehouse stock availability for requested items so that I can decide whether inventory can be transferred immediately. | Inter-store Transfers | 2 |
 | TEAM5-16 | Manager | As a Manager, I want low-stock items to be flagged automatically for reorder, so that I can take action before the product runs out. | Inventory Base | 3 |
+| TEAM5-88 | Manager | As a Manager, I want an inventory dashboard showing stock levels and low-stock alerts, from which I can raise a restock request to the Admin, so that I can manage store inventory in one place. | Inventory Base | 3 |
 | TEAM5-15 | Manager | ⁠As a Manager, I want to raise stock requests by specifying the Stock Keeping Unit (SKU), required quantity, and urgency level so that the Admin can replenish inventory through inter-store transfers or warehouse stock before products run out. | Pricing & Stock Requests | 3 |
 | TEAM5-17 | Manager | As a Manager, I want to monitor the approval status of my stock requests so that I know when requested inventory will be allocated or delivered to my store. | Pricing & Stock Requests | 2 |
 | TEAM5-18 | Manager | As a Manager, I want the system to block me from saving a price below the Admin's floor, so that I cannot breach corporate pricing policy accidentally. | Pricing & Stock Requests | 2 |
@@ -54,7 +55,7 @@ Velocity = 693 / 227 = **3.05 hrs per story point**.
 | TEAM5-72 | Admin | As an Admin I want to remove store profile so that the store which is not operational doesn't reflect in database. | Store Onboarding | 3 |
 | TEAM5-8 | Admin | As an Admin, I want to assign a manager when creating a store, so that the store has operational ownership from day one. | Store Onboarding | 2 |
 
-## Sprint 2 (26 stories, 93 pts)
+## Sprint 2 (27 stories, 96 pts)
 
 | Key | Role | User Story | Epic | Pts |
 |-----|------|-----------|------|-----|
@@ -84,8 +85,9 @@ Velocity = 693 / 227 = **3.05 hrs per story point**.
 | TEAM5-33 | Sales Associate | As a Sales Associate, I want to take payment via Razorpay and issue a digital receipt, so that checkout is fast and compliant. | Sell, QR & Payments | 8 |
 | TEAM5-34 | Sales Associate | As a Sales Associate, I want to process payments via card terminal (tap/swipe), so that clients can pay with credit or debit cards. | Sell, QR & Payments | 3 |
 | TEAM5-35 | Sales Associate | As a Sales Associate, I want to route the completed order as a store sale, BOPIS reservation, or ship-from-warehouse, so that the correct fulfilment process is triggered based on the order type. | Sell, QR & Payments | 3 |
+| TEAM5-87 | Sales Associate | As a Sales Associate, I want to verify a client's digital receipt at BOPIS pickup so that only the correct person collects the reserved item. | Sell, QR & Payments | 3 |
 
-## Sprint 3 (26 stories, 72 pts)
+## Sprint 3 (27 stories, 77 pts)
 
 | Key | Role | User Story | Epic | Pts |
 |-----|------|-----------|------|-----|
@@ -98,6 +100,7 @@ Velocity = 693 / 227 = **3.05 hrs per story point**.
 | TEAM5-46 | After-Sales | As an After-Sales Specialist, I want the system to flag out-of-warranty or voided coverage clearly, so that the client is informed upfront about potential costs. | AST Intake & Warranty | 2 |
 | TEAM5-75 | After-Sales | As an After-Sales Associate, I want to verify a product's authenticity so that counterfeit items are not accepted for service. | AST Intake & Warranty | 5 |
 | TEAM5-76 | After-Sales | As an After-Sales Associate, I want to view a product's service history so that I can understand previous repairs before creating a new request. | AST Intake & Warranty | 3 |
+| TEAM5-89 | Sales Associate | As a Sales Associate, I want to use the app in multiple languages, so that I can serve clients in their preferred language. | Accessibility & Localization | 5 |
 | TEAM5-77 | After-Sales | As an After-Sales Associate, I want to view pending customer approvals so that I can follow up on delayed responses. | After-Sales Workload Views | 2 |
 | TEAM5-80 | After-Sales | As an After-Sales Associate, I want to filter repair requests by status so that I can quickly locate specific service cases. | After-Sales Workload Views | 2 |
 | TEAM5-81 | After-Sales | As an After-Sales Associate, I want to view all active service requests so that I can monitor ongoing repair workloads. | After-Sales Workload Views | 2 |
