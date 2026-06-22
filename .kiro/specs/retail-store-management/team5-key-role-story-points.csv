@@ -49,7 +49,7 @@ TEAM5-55,After-Sales,"As an After-Sales Specialist, I want to send the cost esti
 TEAM5-56,After-Sales,"As an After-Sales Specialist, I want the repair to proceed only after client approval, so that we avoid disputes over unauthorised work.",3
 TEAM5-57,After-Sales,"As an After-Sales Specialist, I want declined repairs to skip the repair workflow and go directly to return/pickup scheduling, so that the client can retrieve their item without delay.",2
 TEAM5-58,Admin,"As an Admin, I want the manager profile view to be read-only, so that performance records cannot be altered.",1
-TEAM5-60,Admin,"As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role.",8
+TEAM5-60,Admin,"As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role.",5
 TEAM5-61,Manager,"As a Manager, I want to log in with my credentials, so that I can access only the features and data relevant to my role.",3
 TEAM5-62,Sales Associate,"As a Sales Associate I want to log in with my credentials, so that I can access only the features and data relevant to my role.",3
 TEAM5-63,After-Sales,"As an After-Sales Specialist I want to log in with my credentials, so that I can access only the features and data relevant to my role.",3

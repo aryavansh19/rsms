@@ -1,30 +1,28 @@
-# TEAM5 Backlog - Final Sprint Plan (dependency-checked)
+# TEAM5 Backlog - Final Sprint Plan (synced to Jira)
 
-Source of truth: `final-backlog-team5.csv`. 77 stories, 245 story points.
-
-Sprint 1 contains NO stories that depend on Sprint 2/3 work (verified).
+Synced to `Jira.csv`. 77 stories, 242 story points. Sprint 1 per Jira; S2/S3 dependency-checked. No Sprint-1 story depends on S2/S3.
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
 | Total stories | 77 |
-| Total story points | 245 |
+| Total story points | 242 |
 | Must / Should / Could | 40 / 34 / 3 |
-| Points 1/2/3/5/8 | 1 / 24 / 41 / 5 / 6 |
+| Points 1/2/3/5/8 | 1 / 24 / 41 / 6 / 5 |
 
 ## Sprint Capacity
 
-Total = 693 hrs (189 / 283.5 / 220.5). Velocity = 693 / 245 = **2.83 hrs/point**.
+Total = 693 hrs (189 / 283.5 / 220.5). Velocity = 693 / 242 = **2.86 hrs/point**.
 
 | Sprint | Stories | Points | Hours (pts x rate) | Capacity | Diff |
 |--------|---------|--------|--------------------|----------|------|
-| 1 | 20 | 66 | 186.7 | 189.0 | -2.3 |
-| 2 | 30 | 102 | 288.5 | 283.5 | +5.0 |
-| 3 | 27 | 77 | 217.8 | 220.5 | -2.7 |
-| **Total** | **77** | **245** | **693.0** | **693** | - |
+| 1 | 22 | 68 | 194.7 | 189.0 | +5.7 |
+| 2 | 28 | 97 | 277.8 | 283.5 | -5.7 |
+| 3 | 27 | 77 | 220.5 | 220.5 | +0.0 |
+| **Total** | **77** | **242** | **693.0** | **693** | - |
 
-## Sprint 1 (20 stories, 66 pts)
+## Sprint 1 (22 stories, 68 pts)
 
 | Key | Role | User Story | Epic | Pts |
 |-----|------|-----------|------|-----|
@@ -38,7 +36,7 @@ Total = 693 hrs (189 / 283.5 / 220.5). Velocity = 693 / 245 = **2.83 hrs/point**
 | TEAM5-18 | Manager | As a Manager, I want the system to block me from saving a price below the Admin's floor, so that I cannot breach corporate pricing policy accidentally. | Pricing & Stock Requests | 2 |
 | TEAM5-19 | Manager | As a Manager, I want to adjust the selling price of products within the pricing band defined by the Admin so that I can respond to local market conditions while complying with corporate pricing policies. | Pricing & Stock Requests | 3 |
 | TEAM5-58 | Admin | As an Admin, I want the manager profile view to be read-only, so that performance records cannot be altered. | Profiles | 1 |
-| TEAM5-60 | Admin | As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 8 |
+| TEAM5-60 | Admin | As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 5 |
 | TEAM5-61 | Manager | As a Manager, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 3 |
 | TEAM5-62 | Sales Associate | As a Sales Associate I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 3 |
 | TEAM5-66 | Admin | As an Admin, I want to create a new SKU with product details and define its launch date, so that the product is catalogued and ready for distribution. | Product & Pricing | 3 |
@@ -47,9 +45,11 @@ Total = 693 hrs (189 / 283.5 / 220.5). Velocity = 693 / 245 = **2.83 hrs/point**
 | TEAM5-72 | Admin | As an Admin I want to remove store profile so that the store which is not operational doesn't reflect in database. | Store Onboarding | 3 |
 | TEAM5-73 | Admin | As an Admin I want to delete Manager profile so that the person who has resgined is not in the database anymore. | Profiles | 2 |
 | TEAM5-74 | Manager | As a Manager I want to delete Staff profile so that the person who has resgined is not in the database anymore. | Profiles | 2 |
+| TEAM5-82 | Admin | As an Admin, I want to verify warehouse stock availability for requested items so that I can decide whether inventory can be transferred immediately. | Inter-store Transfers | 2 |
+| TEAM5-83 | Admin | As an Admin, I want to approve transfer requests when sufficient stock is available so that inventory can be dispatched to stores. | Inter-store Transfers | 3 |
 | TEAM5-88 | Manager | As a Manager, I want to view an inventory dashboard with stock levels, low-stock alerts, and a one-tap restock request to the Admin, so that I can manage store inventory in one place. | Inventory Base | 3 |
 
-## Sprint 2 (30 stories, 102 pts)
+## Sprint 2 (28 stories, 97 pts)
 
 | Key | Role | User Story | Epic | Pts |
 |-----|------|-----------|------|-----|
@@ -77,8 +77,6 @@ Total = 693 hrs (189 / 283.5 / 220.5). Velocity = 693 / 245 = **2.83 hrs/point**
 | TEAM5-63 | After-Sales | As an After-Sales Specialist I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 3 |
 | TEAM5-70 | Manager | As a Manager, I want to track RSVP responses (Accepted, Declined, Pending), so that I can estimate event attendance. | Events & Staff | 2 |
 | TEAM5-71 | Manager | As a Manager, I want to view event analytics and RSVP reports, so that I can evaluate event performance. | Events & Staff | 3 |
-| TEAM5-82 | Admin | As an Admin, I want to verify warehouse stock availability for requested items so that I can decide whether inventory can be transferred immediately. | Inter-store Transfers | 2 |
-| TEAM5-83 | Admin | As an Admin, I want to approve transfer requests when sufficient stock is available so that inventory can be dispatched to stores. | Inter-store Transfers | 3 |
 | TEAM5-84 | Admin | As an Admin, I want to create purchase orders when warehouse stock is insufficient so that required inventory can be replenished. | Inter-store Transfers | 3 |
 | TEAM5-85 | Admin | As an Admin, I want to dispatch approved inventory transfers to stores so that requested products reach their destination. | Inter-store Transfers | 2 |
 | TEAM5-86 | Admin | As an Admin, I want store managers to receive transfer status notifications so that they can prepare for incoming inventory. | Inter-store Transfers | 2 |

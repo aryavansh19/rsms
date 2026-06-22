@@ -1,6 +1,6 @@
 # TEAM5 Story Points - Rationale
 
-Total: 77 stories, 245 points.
+Total: 77 stories, 242 points.
 
 ## Admin
 | Key | Story | Pts | Rationale |
@@ -12,7 +12,7 @@ Total: 77 stories, 245 points.
 | TEAM5-9 | As an Admin, I want to view each manager’s currently assigned store, so that I know who is responsible for which location at any time. | 2 | Read-only lookup of each manager's current store. >1 (needs a query/join + search); <3 (display only, no logic). |
 | TEAM5-10 | As an Admin, I want to view a cross-store revenue dashboard with monthly breakdowns, so that I can monitor business performance at a glance. | 5 | Cross-store revenue aggregation + monthly bucketing + charts. >3 (multi-store computation + viz); <8. Pure feature (Sprint 3). |
 | TEAM5-58 | As an Admin, I want the manager profile view to be read-only, so that performance records cannot be altered. | 1 | Pure display with edit controls removed - the simplest possible item, hence 1 (nothing below it). |
-| TEAM5-60 | As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | 8 | SPRINT-1 SETUP STORY. Login + GitHub repo/CI + project scaffold (MVVM/DI/navigation) + Passkey/RBAC + Keychain + design-system baseline. 8 = top of scale; this is where project & auth setup lives. |
+| TEAM5-60 | As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | 5 | SPRINT-1 SETUP STORY. Login + GitHub repo/CI + project scaffold (MVVM/DI/navigation) + Passkey/RBAC + Keychain + design-system baseline. 8 = top of scale; this is where project & auth setup lives. |
 | TEAM5-65 | As an Admin, I want to filter the revenue dashboard by country, so that I can analyse performance across specific geographies. | 2 | A country filter on an existing dashboard. >1 (recompute + UI control); <3 (no new data or logic). |
 | TEAM5-66 | As an Admin, I want to create a new SKU with product details and define its launch date, so that the product is catalogued and ready for distribution. | 3 | SKU form + uniqueness + launch-date validation + cataloguing. >2 for the rules; <5 because asset push lives in a separate concern. |
 | TEAM5-67 | As an Admin, I want to set a minimum floor price per SKU per currency, so that managers cannot discount below a level that protects brand value and margins. | 3 | Per-currency price-band data model + floor constraint enforced downstream. >2 for the model + rule; <5 because enforcement logic sits in the pricing service. |
