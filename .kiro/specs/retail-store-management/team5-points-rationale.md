@@ -1,20 +1,20 @@
 # TEAM5 Story Points - Rationale
 
-Why each of the 77 stories got its value (effort + tech stack + difficulty). Scale 1/2/3/5/8. Setup baked only into Sprint 1 (TEAM5-60, TEAM5-2).
+Why each of the 77 stories got its value. Scale 1/2/3/5/8. ALL setup (GitHub, Supabase, scaffold) baked into Sprint 1 stories TEAM5-60 and TEAM5-2.
 
-Total: 77 stories, 238 points.
+Total: 77 stories, 241 points.
 
 ## Admin
 | Key | Story | Pts | Rationale |
 |-----|-------|-----|-----------|
-| TEAM5-2 | As an Admin, I want to create a new store profile with name, address, and contact details, so that the store is registered in the system and visible across the platform. | 5 | SPRINT-1 SETUP STORY. Store form + data-layer setup (SwiftData + Supabase + sync). 5 = feature (3) + data-layer setup (2). Setup load lives only in Sprint 1. |
+| TEAM5-2 | As an Admin, I want to create a new store profile with name, address, and contact details, so that the store is registered in the system and visible across the platform. | 8 | SPRINT-1 SETUP STORY. Store form + Supabase setup (project, schema, RLS, client SDK) + SwiftData local store + sync engine. 8 = top of scale; this is where the data-layer setup lives. |
 | TEAM5-6 | As an Admin, I want to assign a locale, currency, and timezone to each store, so that all transactions, reports, and communications reflect the store’s local context. | 2 | Config fields (locale/currency/timezone) on an existing store. >1 because it affects downstream formatting/reports; <3 because it is selection + storage, no new logic. |
 | TEAM5-7 | As an Admin, I want to configure payment terminals (Razorpay and card) for a new store, so that the store can accept payments from day one. | 3 | Captures payment-terminal config validated before go-live. >2 (validation); <8 (config only). Pure feature - no setup load. |
 | TEAM5-8 | As an Admin, I want to assign a manager when creating a store, so that the store has operational ownership from day one. | 2 | A single relational link (store->manager) via a picker. >1 because a store must have an owner (constraint); <3 because there is no workflow. |
 | TEAM5-9 | As an Admin, I want to view each manager’s currently assigned store, so that I know who is responsible for which location at any time. | 2 | Read-only lookup of each manager's current store. >1 (needs a query/join + search); <3 (display only, no logic). |
 | TEAM5-10 | As an Admin, I want to view a cross-store revenue dashboard with monthly breakdowns, so that I can monitor business performance at a glance. | 5 | Cross-store revenue aggregation + monthly bucketing + charts. >3 (multi-store computation + viz); <8. Pure feature (Sprint 3). |
 | TEAM5-58 | As an Admin, I want the manager profile view to be read-only, so that performance records cannot be altered. | 1 | Pure display with edit controls removed - the simplest possible item, hence 1 (nothing below it). |
-| TEAM5-60 | As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | 8 | SPRINT-1 SETUP STORY. Login + one-time project setup baked in: git/project scaffold, MVVM/DI/navigation, Passkey + RBAC framework, Keychain, design-system baseline. 8 = top of scale; this is where Sprint-1 setup lives. |
+| TEAM5-60 | As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | 8 | SPRINT-1 SETUP STORY. Login + GitHub repo/CI + project scaffold (MVVM/DI/navigation) + Passkey/RBAC + Keychain + design-system baseline. 8 = top of scale; this is where project & auth setup lives. |
 | TEAM5-65 | As an Admin, I want to filter the revenue dashboard by country, so that I can analyse performance across specific geographies. | 2 | A country filter on an existing dashboard. >1 (recompute + UI control); <3 (no new data or logic). |
 | TEAM5-66 | As an Admin, I want to create a new SKU with product details and define its launch date, so that the product is catalogued and ready for distribution. | 3 | SKU form + uniqueness + launch-date validation + cataloguing. >2 for the rules; <5 because asset push lives in a separate concern. |
 | TEAM5-67 | As an Admin, I want to set a minimum floor price per SKU per currency, so that managers cannot discount below a level that protects brand value and margins. | 3 | Per-currency price-band data model + floor constraint enforced downstream. >2 for the model + rule; <5 because enforcement logic sits in the pricing service. |
@@ -43,7 +43,7 @@ Total: 77 stories, 238 points.
 | TEAM5-70 | As a Manager, I want to track RSVP responses (Accepted, Declined, Pending), so that I can estimate event attendance. | 2 | RSVP status capture per invitee + counts. >1 (per-invitee state); <3 (simple tracking). |
 | TEAM5-71 | As a Manager, I want to view event analytics and RSVP reports, so that I can evaluate event performance. | 3 | Aggregated invites/RSVP/attendance report + export. >2 (aggregation + export); <5 (reporting on existing data). |
 | TEAM5-74 | As a Manager I want to delete Staff profile so that the person who has resgined is not in the database anymore. | 2 | Soft-delete + audit of a staff record. >1 (confirmation/audit); <3 (single entity). |
-| TEAM5-88 | As a Manager, I want an inventory dashboard showing stock levels and low-stock alerts, from which I can raise a restock request to the Admin, so that I can manage store inventory in one place. | 3 | Inventory overview dashboard composing existing stock data, low-stock alerts, and a restock-request action. 3 - mainly UI composition + wiring over existing inventory features (TEAM5-15/16/17); not 5 since the underlying logic already exists. |
+| TEAM5-88 | As a Manager, I want to view an inventory dashboard with stock levels, low-stock alerts, and a one-tap restock request to the Admin, so that I can manage store inventory in one place. | 3 | Inventory overview dashboard composing existing stock data, low-stock alerts, and a restock-request action. 3 - mainly UI composition + wiring over existing inventory features (TEAM5-15/16/17); not 5 since the underlying logic already exists. |
 
 ## Sales Associate
 | Key | Story | Pts | Rationale |
@@ -65,7 +65,7 @@ Total: 77 stories, 238 points.
 | TEAM5-34 | As a Sales Associate, I want to process payments via card terminal (tap/swipe), so that clients can pay with credit or debit cards. | 3 | Card-terminal (tap/swipe) integration capturing the result. >2 (hardware integration); kept <5/8 because result handling is more bounded than the Razorpay SDK flow. |
 | TEAM5-35 | As a Sales Associate, I want to route the completed order as a store sale, BOPIS reservation, or ship-from-warehouse, so that the correct fulfilment process is triggered based on the order type. | 3 | Branch the completed order into 3 fulfilment flows. >2 (multi-path routing); <5 (each path defined elsewhere). |
 | TEAM5-62 | As a Sales Associate I want to log in with my credentials, so that I can access only the features and data relevant to my role. | 3 | Login reusing the auth framework built in TEAM5-60. 3 - standard role-scoped login; setup cost carried by TEAM5-60. |
-| TEAM5-87 | As a Sales Associate, I want to verify a client's digital receipt at BOPIS pickup so that only the correct person collects the reserved item. | 3 | Receipt-vs-reservation validation + identity match + handover gate. >2 (matching + block logic); <5. Pure feature. |
+| TEAM5-87 | As a Sales Associate, I want to verify a client's digital receipt at BOPIS pickup, so that only the correct person collects the reserved item. | 3 | Receipt-vs-reservation validation + identity match + handover gate. >2 (matching + block logic); <5. Pure feature. |
 | TEAM5-89 | As a Sales Associate, I want to use the app in multiple languages, so that I can serve clients in their preferred language. | 5 | Multi-language localization across associate-facing screens: i18n framework + string catalog + locale-aware UI. 5 for breadth across screens; <8 (store-locale groundwork from TEAM5-6 exists). |
 
 ## After-Sales

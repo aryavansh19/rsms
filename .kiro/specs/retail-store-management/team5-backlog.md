@@ -4,34 +4,33 @@
 
 **Estimation basis:** effort + tech stack + feature difficulty, scale 1/2/3/5/8.
 
-**Setup rule:** one-time project/git/architecture setup is baked **only into Sprint 1** (TEAM5-60 auth+scaffold, TEAM5-2 data layer). Sprints 2 & 3 are pure feature estimates.
+**Setup rule:** ALL one-time setup (GitHub/CI, Supabase, project scaffold, auth) lives **only in Sprint 1**, baked into its two highest-point stories: TEAM5-60 (GitHub + scaffold + auth, 8) and TEAM5-2 (Supabase + data layer, 8). Sprints 2 & 3 are pure feature estimates.
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
 | Total stories | 77 |
-| Total story points | 238 |
+| Total story points | 241 |
 | Must / Should / Could | 40 / 34 / 3 |
-| Points 1/2/3/5/8 | 1 / 24 / 43 / 4 / 5 |
+| Points 1/2/3/5/8 | 1 / 24 / 43 / 3 / 6 |
 
 ## Sprint Capacity Plan
 
 Total = 693 hrs (Week 1: 189, Week 2: 283.5, Week 3: 220.5). 
-Velocity = 693 / 238 = **2.91 hrs per story point**.
+Velocity = 693 / 241 = **2.88 hrs per story point**.
 
 | Sprint | Theme | Stories | Points | Capacity (hrs) | Points x rate |
 |--------|-------|---------|--------|----------------|---------------|
-| 1 | Foundation + setup + mgr inventory dashboard | 23 | 65 | 189.0 | 189.3 |
-| 2 | Commerce + transfers + events + BOPIS verify | 27 | 96 | 283.5 | 279.5 |
-| 3 | After-sales + analytics + localization | 27 | 77 | 220.5 | 224.2 |
-| **Total** | | **77** | **238** | **693** | **693** |
+| 1 | Foundation + ALL setup (60 GitHub, 2 Supabase) | 22 | 66 | 189.0 | 189.8 |
+| 2 | Commerce + transfers + events | 28 | 98 | 283.5 | 281.8 |
+| 3 | After-sales + analytics + localization | 27 | 77 | 220.5 | 221.4 |
+| **Total** | | **77** | **241** | **693** | **693** |
 
-## Sprint 1 (23 stories, 65 pts)
+## Sprint 1 (22 stories, 66 pts)
 
 | Key | Role | User Story | Epic | Pts |
 |-----|------|-----------|------|-----|
-| TEAM5-9 | Admin | As an Admin, I want to view each manager’s currently assigned store, so that I know who is responsible for which location at any time. | Analytics & Oversight | 2 |
 | TEAM5-60 | Admin | As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 8 |
 | TEAM5-61 | Manager | As a Manager, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 3 |
 | TEAM5-62 | Sales Associate | As a Sales Associate I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 3 |
@@ -39,7 +38,7 @@ Velocity = 693 / 238 = **2.91 hrs per story point**.
 | TEAM5-68 | Admin | As an Admin, I want to receive and review transfer requests raised by managers, so that I can evaluate stock needs across the network. | Inter-store Transfers | 2 |
 | TEAM5-82 | Admin | As an Admin, I want to verify warehouse stock availability for requested items so that I can decide whether inventory can be transferred immediately. | Inter-store Transfers | 2 |
 | TEAM5-16 | Manager | As a Manager, I want low-stock items to be flagged automatically for reorder, so that I can take action before the product runs out. | Inventory Base | 3 |
-| TEAM5-88 | Manager | As a Manager, I want an inventory dashboard showing stock levels and low-stock alerts, from which I can raise a restock request to the Admin, so that I can manage store inventory in one place. | Inventory Base | 3 |
+| TEAM5-88 | Manager | As a Manager, I want to view an inventory dashboard with stock levels, low-stock alerts, and a one-tap restock request to the Admin, so that I can manage store inventory in one place. | Inventory Base | 3 |
 | TEAM5-15 | Manager | ⁠As a Manager, I want to raise stock requests by specifying the Stock Keeping Unit (SKU), required quantity, and urgency level so that the Admin can replenish inventory through inter-store transfers or warehouse stock before products run out. | Pricing & Stock Requests | 3 |
 | TEAM5-17 | Manager | As a Manager, I want to monitor the approval status of my stock requests so that I know when requested inventory will be allocated or delivered to my store. | Pricing & Stock Requests | 2 |
 | TEAM5-18 | Manager | As a Manager, I want the system to block me from saving a price below the Admin's floor, so that I cannot breach corporate pricing policy accidentally. | Pricing & Stock Requests | 2 |
@@ -49,13 +48,13 @@ Velocity = 693 / 238 = **2.91 hrs per story point**.
 | TEAM5-58 | Admin | As an Admin, I want the manager profile view to be read-only, so that performance records cannot be altered. | Profiles | 1 |
 | TEAM5-73 | Admin | As an Admin I want to delete Manager profile so that the person who has resgined is not in the database anymore. | Profiles | 2 |
 | TEAM5-74 | Manager | As a Manager I want to delete Staff profile so that the person who has resgined is not in the database anymore. | Profiles | 2 |
-| TEAM5-2 | Admin | As an Admin, I want to create a new store profile with name, address, and contact details, so that the store is registered in the system and visible across the platform. | Store Onboarding | 5 |
+| TEAM5-2 | Admin | As an Admin, I want to create a new store profile with name, address, and contact details, so that the store is registered in the system and visible across the platform. | Store Onboarding | 8 |
 | TEAM5-6 | Admin | As an Admin, I want to assign a locale, currency, and timezone to each store, so that all transactions, reports, and communications reflect the store’s local context. | Store Onboarding | 2 |
 | TEAM5-7 | Admin | As an Admin, I want to configure payment terminals (Razorpay and card) for a new store, so that the store can accept payments from day one. | Store Onboarding | 3 |
 | TEAM5-72 | Admin | As an Admin I want to remove store profile so that the store which is not operational doesn't reflect in database. | Store Onboarding | 3 |
 | TEAM5-8 | Admin | As an Admin, I want to assign a manager when creating a store, so that the store has operational ownership from day one. | Store Onboarding | 2 |
 
-## Sprint 2 (27 stories, 96 pts)
+## Sprint 2 (28 stories, 98 pts)
 
 | Key | Role | User Story | Epic | Pts |
 |-----|------|-----------|------|-----|
@@ -64,6 +63,7 @@ Velocity = 693 / 238 = **2.91 hrs per story point**.
 | TEAM5-28 | Sales Associate | As a Sales Associate, I want the system to surface complementary products at the cart stage, so that I can suggest cross-sell options to the client. | AI Recommendations | 3 |
 | TEAM5-29 | Sales Associate | As a Sales Associate, I want the system to suggest higher-value alternatives at the cart stage, so that I can offer upsell options that match the client's taste. | AI Recommendations | 3 |
 | TEAM5-32 | Sales Associate | As a Sales Associate, I want the system to suggest similar alternative products when the desired item is unavailable, so that I can still serve the client without losing the sale. | AI Recommendations | 3 |
+| TEAM5-9 | Admin | As an Admin, I want to view each manager’s currently assigned store, so that I know who is responsible for which location at any time. | Analytics & Oversight | 2 |
 | TEAM5-20 | Sales Associate | As a Sales Associate, I want to create a new client card with basic consented details (name, phone number, style preferences), so that I can start building a personalised shopping experience. | Clienteling & Appointments | 3 |
 | TEAM5-21 | Sales Associate | As a Sales Associate, I want to search for an existing client in the CRM by name or phone number, so that I can quickly pull up their profile when they visit. | Clienteling & Appointments | 2 |
 | TEAM5-22 | Sales Associate | As a Sales Associate, I want to book an in-store or video call appointment for a client, so that I can provide a scheduled, personalised consultation. | Clienteling & Appointments | 3 |
@@ -85,7 +85,7 @@ Velocity = 693 / 238 = **2.91 hrs per story point**.
 | TEAM5-33 | Sales Associate | As a Sales Associate, I want to take payment via Razorpay and issue a digital receipt, so that checkout is fast and compliant. | Sell, QR & Payments | 8 |
 | TEAM5-34 | Sales Associate | As a Sales Associate, I want to process payments via card terminal (tap/swipe), so that clients can pay with credit or debit cards. | Sell, QR & Payments | 3 |
 | TEAM5-35 | Sales Associate | As a Sales Associate, I want to route the completed order as a store sale, BOPIS reservation, or ship-from-warehouse, so that the correct fulfilment process is triggered based on the order type. | Sell, QR & Payments | 3 |
-| TEAM5-87 | Sales Associate | As a Sales Associate, I want to verify a client's digital receipt at BOPIS pickup so that only the correct person collects the reserved item. | Sell, QR & Payments | 3 |
+| TEAM5-87 | Sales Associate | As a Sales Associate, I want to verify a client's digital receipt at BOPIS pickup, so that only the correct person collects the reserved item. | Sell, QR & Payments | 3 |
 
 ## Sprint 3 (27 stories, 77 pts)
 
