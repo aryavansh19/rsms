@@ -1,8 +1,8 @@
 # TEAM5 Story Points - Rationale
 
-Why each of the 75 stories got its point value (Fibonacci 1/2/3/5/8). Each rationale states why not higher and why not lower.
+Why each of the 74 stories got its value (Fibonacci 1/2/3/5/8). Baseline = TEAM5-58 (1 pt); reference = TEAM5-2 (3 pts). Each rationale states why not higher and why not lower.
 
-Total: 75 stories, 222 points.
+Total: 74 stories, 220 points.
 
 ## Admin
 
@@ -94,7 +94,6 @@ Total: 75 stories, 222 points.
 | TEAM5-75 | As an After-Sales Associate, I want to verify a product's authenticity so that counterfeit items are not accepted for service. | 5 | Serial/certificate authenticity verification + counterfeit flag. >3 (cross-checks beyond a lookup); <8 (no external/ML verification). |
 | TEAM5-76 | As an After-Sales Associate, I want to view a product's service history so that I can understand previous repairs before creating a new request. | 3 | Service history by serial with prior outcomes. >2 (linked history); <5 (read aggregation). |
 | TEAM5-77 | As an After-Sales Associate, I want to view pending customer approvals so that I can follow up on delayed responses. | 2 | Pending-approvals list with an age indicator. >1 (filtered list + derived field); <3 (read only). |
-| TEAM5-78 | As an After-Sales Associate, I want to schedule customer pickups so that completed items are returned in an organized manner. | 2 | Schedule customer pickups (overlaps TEAM5-50). >1 (scheduling); <3 (bounded). |
 | TEAM5-79 | As an After-Sales Associate, I want to generate invoices for completed repairs so that customers receive a detailed breakdown of charges. | 3 | Itemised invoice for completed paid repairs. >2 (computation + document); <5 (templated). |
 | TEAM5-80 | As an After-Sales Associate, I want to filter repair requests by status so that I can quickly locate specific service cases. | 2 | Filter repair requests by status. >1 (filter control); <3 (list view). |
 | TEAM5-81 | As an After-Sales Associate, I want to view all active service requests so that I can monitor ongoing repair workloads. | 2 | List active service requests with stage/assignee. >1 (query + display); <3 (read only). |
