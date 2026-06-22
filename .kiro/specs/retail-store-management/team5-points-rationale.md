@@ -1,6 +1,6 @@
 # TEAM5 Story Points - Rationale
 
-Total: 77 stories, 242 points. Scale 1/2/3/5/8.
+Total: 77 stories, 245 points. Scale 1/2/3/5/8.
 
 ## Admin
 | Key | Story | Pts | Rationale |
@@ -34,7 +34,7 @@ Total: 77 stories, 242 points. Scale 1/2/3/5/8.
 | TEAM5-14 | As a Manager, I want to view performance metrics, units sold, upsell rate, and client satisfaction score of the sales associate so that I can evaluate employee performance. | 3 | Aggregates units sold / upsell rate / CSAT per associate with filtering. >2 (computation over data); <5 (no ML, derived from existing records). |
 | TEAM5-15 | ⁠As a Manager, I want to raise stock requests by specifying the Stock Keeping Unit (SKU), required quantity, and urgency level so that the Admin can replenish inventory through inter-store transfers or warehouse stock before products run out. | 3 | Form (SKU/qty/urgency) + submit into the Admin queue. >2 (workflow entry); <5 (standard form). |
 | TEAM5-16 | As a Manager, I want low-stock items to be flagged automatically for reorder, so that I can take action before the product runs out. | 3 | Threshold rule + automatic flagging + dashboard surfacing. >2 (rule logic); <5 (single rule, no forecasting). |
-| TEAM5-17 | As a Manager, I want to monitor the approval status of my stock requests so that I know when requested inventory will be allocated or delivered to my store. | 2 | Status view of stock requests that updates live. 2 - read-only live status (>1; <3). |
+| TEAM5-17 | As a Manager, I want to monitor the approval status of my stock requests so that I know when requested inventory will be allocated or delivered to my store. | 5 | Monitor stock-request approval status with real-time updates across pending/approved/routed/delivered states. 5 per team estimate (live multi-state sync). |
 | TEAM5-18 | As a Manager, I want the system to block me from saving a price below the Admin's floor, so that I cannot breach corporate pricing policy accidentally. | 2 | A validation guard that reuses the floor rule to block a save. >1 (enforcement point); <3 (the rule itself is defined elsewhere - TEAM5-67/19). |
 | TEAM5-19 | As a Manager, I want to adjust the selling price of products within the pricing band defined by the Admin so that I can respond to local market conditions while complying with corporate pricing policies. | 3 | Editable price clamped to the Admin band with min/max checks. >2 (validation + UI); <5 (bounded logic). |
 | TEAM5-61 | As a Manager, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | 3 | Login reusing the auth framework built in TEAM5-60. 3 - standard role-scoped login; framework/setup cost is carried by TEAM5-60, not here. |
