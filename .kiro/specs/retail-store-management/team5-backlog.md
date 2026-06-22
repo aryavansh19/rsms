@@ -1,8 +1,8 @@
-# TEAM5 Backlog - Estimated
+# TEAM5 Backlog - Estimated & Sprint-Planned
 
 Estimation of the 75 user stories in `team5_user_stories_only.txt`, keyed by Jira ID.
 
-**Conventions:** Priority = MoSCoW (Must/Should/Could). Story Points = Fibonacci (1, 2, 3, 5, 8) covering code + unit tests.
+**Conventions:** Priority = MoSCoW. Story Points = Fibonacci (1, 2, 3, 5, 8) covering code + unit tests.
 
 ## Summary
 
@@ -12,9 +12,20 @@ Estimation of the 75 user stories in `team5_user_stories_only.txt`, keyed by Jir
 | Total story points | 222 |
 | Must / Should / Could | 39 / 33 / 3 |
 | Points 1/2/3/5/8 | 1 / 25 / 43 / 2 / 4 |
-| Sprint 1 | 15 stories, 39 pts |
-| Sprint 2 | 38 stories, 122 pts |
-| Sprint 3 | 22 stories, 61 pts |
+
+## Sprint Capacity Plan (840 hrs)
+
+Total: 222 pts over 840 hrs. Raw velocity = 840 / 222 = **3.78 hrs/point**. 
+Planning model: develop at **2.9 hrs/point** (code + unit tests) with overhead reserved per sprint for setup, ceremonies, integration testing, profiling, and section-5 submissions.
+
+| Sprint | Theme | Stories | Points | Dev hrs (pts x 2.9) | Overhead | Total |
+|--------|-------|---------|--------|---------------------|----------|-------|
+| 1 | Foundation + Admin setup | 15 | 39 | 113 | 97 (setup) | 210 |
+| 2 | Commerce engine + transfers | 32 | 108 | 313 | 37 (ceremonies, integration) | 350 |
+| 3 | After-sales + events + submissions | 28 | 75 | 218 | 62 (test, profiling, demo, flow diagram) | 280 |
+| **Total** | | **75** | **222** | **644** | **196** | **840** |
+
+_Rebalance note: 6 stories moved from Sprint 2 to Sprint 3 so points fit hours - after-sales dashboards (TEAM5-77/80/81) regrouped with after-sales, and non-blocking manager events (TEAM5-11/17/71) shifted to Sprint 3._
 
 ## Admin (19 stories, 49 pts)
 
@@ -44,18 +55,18 @@ Estimation of the 75 user stories in `team5_user_stories_only.txt`, keyed by Jir
 
 | Key | User Story | Acceptance Criteria | Priority | Pts | Sprint |
 |-----|-----------|---------------------|----------|-----|--------|
-| TEAM5-11 | As a Manager, I want to create a VIP or launch event with name, date, time, venue, and description, so that the event is formally scheduled. | Required fields validated<br>optionally linked to Admin product launch | Should | 3 | 2 |
+| TEAM5-11 | As a Manager, I want to create a VIP or launch event with name, date, time, venue, and description, so that the event is formally scheduled. | Required fields validated<br>optionally linked to Admin product launch | Should | 3 | 3 |
 | TEAM5-12 | As a Manager, I want to send digital invitations to selected customers, so that they can be informed about upcoming events. | Invites sent via digital channel<br>linked to event | Should | 2 | 2 |
 | TEAM5-13 | As a Manager, I want to review shift histories so that I can monitor employee attendance. | Shift history per associate<br>shows dates/hours | Could | 2 | 2 |
 | TEAM5-14 | As a Manager, I want to view performance metrics, units sold, upsell rate, and client satisfaction score of the sales associate so that I can evaluate employee performance. | Per-associate metrics displayed<br>date-range filterable | Should | 3 | 2 |
 | TEAM5-15 | ⁠As a Manager, I want to raise stock requests by specifying the Stock Keeping Unit (SKU), required quantity, and urgency level so that the Admin can replenish inventory through inter-store transfers or warehouse stock before products run out. | Request captures SKU, qty, urgency<br>submitted to Admin queue | Must | 3 | 2 |
 | TEAM5-16 | As a Manager, I want low-stock items to be flagged automatically for reorder, so that I can take action before the product runs out. | SKU below threshold auto-flagged<br>visible on dashboard | Must | 3 | 1 |
-| TEAM5-17 | As a Manager, I want to monitor the approval status of my stock requests so that I know when requested inventory will be allocated or delivered to my store. | Each request shows status (pending/approved/routed/delivered)<br>real-time | Should | 2 | 2 |
+| TEAM5-17 | As a Manager, I want to monitor the approval status of my stock requests so that I know when requested inventory will be allocated or delivered to my store. | Each request shows status (pending/approved/routed/delivered)<br>real-time | Should | 2 | 3 |
 | TEAM5-18 | As a Manager, I want the system to block me from saving a price below the Admin's floor, so that I cannot breach corporate pricing policy accidentally. | Below-floor save rejected with minimum shown<br>no save persists | Must | 2 | 2 |
 | TEAM5-19 | As a Manager, I want to adjust the selling price of products within the pricing band defined by the Admin so that I can respond to local market conditions while complying with corporate pricing policies. | Editable only within band<br>cannot exceed max or go below floor | Must | 3 | 2 |
 | TEAM5-61 | As a Manager, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Passkey auth<br>Manager modules only scoped to store | Must | 3 | 1 |
 | TEAM5-70 | As a Manager, I want to track RSVP responses (Accepted, Declined, Pending), so that I can estimate event attendance. | Real-time RSVP status per invitee<br>counts per status | Should | 2 | 2 |
-| TEAM5-71 | As a Manager, I want to view event analytics and RSVP reports, so that I can evaluate event performance. | Shows invites sent, RSVP breakdown, attendance<br>exportable | Could | 3 | 2 |
+| TEAM5-71 | As a Manager, I want to view event analytics and RSVP reports, so that I can evaluate event performance. | Shows invites sent, RSVP breakdown, attendance<br>exportable | Could | 3 | 3 |
 | TEAM5-74 | As a Manager I want to delete Staff profile so that the person who has resgined is not in the database anymore. | Delete requires confirmation<br>soft-delete + audit-logged<br>removed staff cannot log in | Should | 2 | 1 |
 
 ## Sales Associate (17 stories, 70 pts)
@@ -105,8 +116,8 @@ Estimation of the 75 user stories in `team5_user_stories_only.txt`, keyed by Jir
 | TEAM5-63 | As an After-Sales Specialist I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Passkey auth<br>After-Sales modules only (RBAC) | Must | 3 | 1 |
 | TEAM5-75 | As an After-Sales Associate, I want to verify a product's authenticity so that counterfeit items are not accepted for service. | Authenticity check by serial/certificate<br>flags suspected counterfeit | Should | 5 | 3 |
 | TEAM5-76 | As an After-Sales Associate, I want to view a product's service history so that I can understand previous repairs before creating a new request. | History by serial number<br>shows prior ASTs/outcomes | Should | 3 | 3 |
-| TEAM5-77 | As an After-Sales Associate, I want to view pending customer approvals so that I can follow up on delayed responses. | Lists ASTs awaiting client approval<br>shows age of request | Should | 2 | 2 |
+| TEAM5-77 | As an After-Sales Associate, I want to view pending customer approvals so that I can follow up on delayed responses. | Lists ASTs awaiting client approval<br>shows age of request | Should | 2 | 3 |
 | TEAM5-78 | As an After-Sales Associate, I want to schedule customer pickups so that completed items are returned in an organized manner. | Pickup scheduled with date/method (consolidate with #34) | Should | 2 | 3 |
 | TEAM5-79 | As an After-Sales Associate, I want to generate invoices for completed repairs so that customers receive a detailed breakdown of charges. | Invoice itemizes parts + labour<br>only for completed paid repairs | Should | 3 | 3 |
-| TEAM5-80 | As an After-Sales Associate, I want to filter repair requests by status so that I can quickly locate specific service cases. | Filter by stage/status<br>results update immediately | Should | 2 | 2 |
-| TEAM5-81 | As an After-Sales Associate, I want to view all active service requests so that I can monitor ongoing repair workloads. | Lists all active ASTs<br>shows stage and assignee | Should | 2 | 2 |
+| TEAM5-80 | As an After-Sales Associate, I want to filter repair requests by status so that I can quickly locate specific service cases. | Filter by stage/status<br>results update immediately | Should | 2 | 3 |
+| TEAM5-81 | As an After-Sales Associate, I want to view all active service requests so that I can monitor ongoing repair workloads. | Lists all active ASTs<br>shows stage and assignee | Should | 2 | 3 |
