@@ -1,41 +1,49 @@
-# TEAM5 Backlog - Estimated & Sprint-Planned
+# TEAM5 Backlog - Sprint Plan
 
-77 user stories, keyed by Jira ID.
+Source of truth: `final-backlog-team5.csv`. 77 user stories, 242 story points.
 
-**Estimation basis:** effort + tech stack + feature difficulty, scale 1/2/3/5/8. Setup (GitHub, Supabase, scaffold) baked into Sprint-1 stories TEAM5-60 & TEAM5-2.
+**Scale:** Fibonacci 1/2/3/5/8. Setup (GitHub, Supabase, scaffold) embedded in Sprint-1 stories TEAM5-60 & TEAM5-2.
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
 | Total stories | 77 |
-| Total story points | 246 |
+| Total story points | 242 |
 | Must / Should / Could | 40 / 34 / 3 |
-| Points 1/2/3/5/8 | 1 / 23 / 42 / 5 / 6 |
+| Points 1/2/3/5/8 | 1 / 25 / 41 / 4 / 6 |
 
-## Sprint Capacity Plan
+## Sprint Capacity
 
-Total = 693 hrs (189 / 283.5 / 220.5). Velocity = 693 / 246 = **2.82 hrs/point**.
+Total = 693 hrs (189 / 283.5 / 220.5). Velocity = 693 / 242 = **2.86 hrs/point**.
 
 | Sprint | Stories | Points | Hours (pts x rate) | Capacity | Diff |
 |--------|---------|--------|--------------------|----------|------|
-| 1 | 16 | 58 | 163.4 | 189.0 | -25.6 |
-| 2 | 33 | 108 | 304.2 | 283.5 | +20.7 |
-| 3 | 28 | 80 | 225.4 | 220.5 | +4.9 |
-| **Total** | **77** | **246** | **693** | **693** | - |
+| 1 | 24 | 75 | 214.8 | 189.0 | +25.8 |
+| 2 | 26 | 90 | 257.7 | 283.5 | -25.8 |
+| 3 | 27 | 77 | 220.5 | 220.5 | +0.0 |
+| **Total** | **77** | **242** | **693.0** | **693** | - |
 
-## Sprint 1 (16 stories, 58 pts)
+## Sprint 1 (24 stories, 75 pts)
 
 | Key | Role | User Story | Epic | Pts |
 |-----|------|-----------|------|-----|
+| TEAM5-9 | Admin | As an Admin, I want to view each manager’s currently assigned store, so that I know who is responsible for which location at any time. | Analytics & Oversight | 2 |
 | TEAM5-60 | Admin | As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 8 |
 | TEAM5-61 | Manager | As a Manager, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 3 |
 | TEAM5-62 | Sales Associate | As a Sales Associate I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 3 |
 | TEAM5-68 | Admin | As an Admin, I want to receive and review transfer requests raised by managers, so that I can evaluate stock needs across the network. | Inter-store Transfers | 2 |
+| TEAM5-82 | Admin | As an Admin, I want to verify warehouse stock availability for requested items so that I can decide whether inventory can be transferred immediately. | Inter-store Transfers | 2 |
+| TEAM5-84 | Admin | As an Admin, I want to create purchase orders when warehouse stock is insufficient so that required inventory can be replenished. | Inter-store Transfers | 3 |
+| TEAM5-85 | Admin | As an Admin, I want to dispatch approved inventory transfers to stores so that requested products reach their destination. | Inter-store Transfers | 2 |
+| TEAM5-16 | Manager | As a Manager, I want low-stock items to be flagged automatically for reorder, so that I can take action before the product runs out. | Inventory Base | 3 |
 | TEAM5-88 | Manager | As a Manager, I want to view an inventory dashboard with stock levels, low-stock alerts, and a one-tap restock request to the Admin, so that I can manage store inventory in one place. | Inventory Base | 3 |
-| TEAM5-15 | Manager | ⁠As a Manager, I want to raise stock requests by specifying the Stock Keeping Unit (SKU), required quantity, and urgency level so that the Admin can replenish inventory through inter-store transfers or warehouse stock before products run out. | Pricing & Stock Requests | 3 |
-| TEAM5-17 | Manager | As a Manager, I want to monitor the approval status of my stock requests so that I know when requested inventory will be allocated or delivered to my store. | Pricing & Stock Requests | 5 |
+| TEAM5-15 | Manager | As a Manager, I want to raise stock requests by specifying the Stock Keeping Unit (SKU), required quantity, and urgency level so that the Admin can replenish inventory through inter-store transfers or warehouse stock before products run out. | Pricing & Stock Requests | 3 |
+| TEAM5-17 | Manager | As a Manager, I want to monitor the approval status of my stock requests so that I know when requested inventory will be allocated or delivered to my store. | Pricing & Stock Requests | 2 |
+| TEAM5-18 | Manager | As a Manager, I want the system to block me from saving a price below the Admin's floor, so that I cannot breach corporate pricing policy accidentally. | Pricing & Stock Requests | 2 |
+| TEAM5-19 | Manager | As a Manager, I want to adjust the selling price of products within the pricing band defined by the Admin so that I can respond to local market conditions while complying with corporate pricing policies. | Pricing & Stock Requests | 3 |
 | TEAM5-66 | Admin | As an Admin, I want to create a new SKU with product details and define its launch date, so that the product is catalogued and ready for distribution. | Product & Pricing | 3 |
+| TEAM5-67 | Admin | As an Admin, I want to set a minimum floor price per SKU per currency, so that managers cannot discount below a level that protects brand value and margins. | Product & Pricing | 3 |
 | TEAM5-58 | Admin | As an Admin, I want the manager profile view to be read-only, so that performance records cannot be altered. | Profiles | 1 |
 | TEAM5-73 | Admin | As an Admin I want to delete Manager profile so that the person who has resgined is not in the database anymore. | Profiles | 2 |
 | TEAM5-74 | Manager | As a Manager I want to delete Staff profile so that the person who has resgined is not in the database anymore. | Profiles | 2 |
@@ -45,7 +53,7 @@ Total = 693 hrs (189 / 283.5 / 220.5). Velocity = 693 / 246 = **2.82 hrs/point**
 | TEAM5-72 | Admin | As an Admin I want to remove store profile so that the store which is not operational doesn't reflect in database. | Store Onboarding | 3 |
 | TEAM5-8 | Admin | As an Admin, I want to assign a manager when creating a store, so that the store has operational ownership from day one. | Store Onboarding | 2 |
 
-## Sprint 2 (33 stories, 108 pts)
+## Sprint 2 (26 stories, 90 pts)
 
 | Key | Role | User Story | Epic | Pts |
 |-----|------|-----------|------|-----|
@@ -54,7 +62,7 @@ Total = 693 hrs (189 / 283.5 / 220.5). Velocity = 693 / 246 = **2.82 hrs/point**
 | TEAM5-28 | Sales Associate | As a Sales Associate, I want the system to surface complementary products at the cart stage, so that I can suggest cross-sell options to the client. | AI Recommendations | 3 |
 | TEAM5-29 | Sales Associate | As a Sales Associate, I want the system to suggest higher-value alternatives at the cart stage, so that I can offer upsell options that match the client's taste. | AI Recommendations | 3 |
 | TEAM5-32 | Sales Associate | As a Sales Associate, I want the system to suggest similar alternative products when the desired item is unavailable, so that I can still serve the client without losing the sale. | AI Recommendations | 3 |
-| TEAM5-9 | Admin | As an Admin, I want to view each manager’s currently assigned store, so that I know who is responsible for which location at any time. | Analytics & Oversight | 2 |
+| TEAM5-63 | After-Sales | As an After-Sales Specialist I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 3 |
 | TEAM5-20 | Sales Associate | As a Sales Associate, I want to create a new client card with basic consented details (name, phone number, style preferences), so that I can start building a personalised shopping experience. | Clienteling & Appointments | 3 |
 | TEAM5-21 | Sales Associate | As a Sales Associate, I want to search for an existing client in the CRM by name or phone number, so that I can quickly pull up their profile when they visit. | Clienteling & Appointments | 2 |
 | TEAM5-22 | Sales Associate | As a Sales Associate, I want to book an in-store or video call appointment for a client, so that I can provide a scheduled, personalised consultation. | Clienteling & Appointments | 3 |
@@ -67,15 +75,8 @@ Total = 693 hrs (189 / 283.5 / 220.5). Velocity = 693 / 246 = **2.82 hrs/point**
 | TEAM5-14 | Manager | As a Manager, I want to view performance metrics, units sold, upsell rate, and client satisfaction score of the sales associate so that I can evaluate employee performance. | Events & Staff | 3 |
 | TEAM5-70 | Manager | As a Manager, I want to track RSVP responses (Accepted, Declined, Pending), so that I can estimate event attendance. | Events & Staff | 2 |
 | TEAM5-71 | Manager | As a Manager, I want to view event analytics and RSVP reports, so that I can evaluate event performance. | Events & Staff | 3 |
-| TEAM5-82 | Admin | As an Admin, I want to verify warehouse stock availability for requested items so that I can decide whether inventory can be transferred immediately. | Inter-store Transfers | 2 |
 | TEAM5-83 | Admin | As an Admin, I want to approve transfer requests when sufficient stock is available so that inventory can be dispatched to stores. | Inter-store Transfers | 3 |
-| TEAM5-84 | Admin | As an Admin, I want to create purchase orders when warehouse stock is insufficient so that required inventory can be replenished. | Inter-store Transfers | 3 |
-| TEAM5-85 | Admin | As an Admin, I want to dispatch approved inventory transfers to stores so that requested products reach their destination. | Inter-store Transfers | 3 |
 | TEAM5-86 | Admin | As an Admin, I want store managers to receive transfer status notifications so that they can prepare for incoming inventory. | Inter-store Transfers | 2 |
-| TEAM5-16 | Manager | As a Manager, I want low-stock items to be flagged automatically for reorder, so that I can take action before the product runs out. | Inventory Base | 3 |
-| TEAM5-18 | Manager | As a Manager, I want the system to block me from saving a price below the Admin's floor, so that I cannot breach corporate pricing policy accidentally. | Pricing & Stock Requests | 2 |
-| TEAM5-19 | Manager | As a Manager, I want to adjust the selling price of products within the pricing band defined by the Admin so that I can respond to local market conditions while complying with corporate pricing policies. | Pricing & Stock Requests | 3 |
-| TEAM5-67 | Admin | As an Admin, I want to set a minimum floor price per SKU per currency, so that managers cannot discount below a level that protects brand value and margins. | Product & Pricing | 3 |
 | TEAM5-30 | Sales Associate | As a Sales Associate, I want to check inventory availability (in-store, warehouse, nearby stores) before presenting a product, so that I don't recommend items that are out of stock. | Sell, QR & Payments | 3 |
 | TEAM5-31 | Sales Associate | As a Sales Associate, I want to scan a product's QR code at the point of sale, so that both the client's purchase history and the store's inventory records are updated simultaneously in one action. | Sell, QR & Payments | 8 |
 | TEAM5-33 | Sales Associate | As a Sales Associate, I want to take payment via Razorpay and issue a digital receipt, so that checkout is fast and compliant. | Sell, QR & Payments | 5 |
@@ -83,7 +84,7 @@ Total = 693 hrs (189 / 283.5 / 220.5). Velocity = 693 / 246 = **2.82 hrs/point**
 | TEAM5-35 | Sales Associate | As a Sales Associate, I want to route the completed order as a store sale, BOPIS reservation, or ship-from-warehouse, so that the correct fulfilment process is triggered based on the order type. | Sell, QR & Payments | 3 |
 | TEAM5-87 | Sales Associate | As a Sales Associate, I want to verify a client's digital receipt at BOPIS pickup, so that only the correct person collects the reserved item. | Sell, QR & Payments | 3 |
 
-## Sprint 3 (28 stories, 80 pts)
+## Sprint 3 (27 stories, 77 pts)
 
 | Key | Role | User Story | Epic | Pts |
 |-----|------|-----------|------|-----|
@@ -102,7 +103,6 @@ Total = 693 hrs (189 / 283.5 / 220.5). Velocity = 693 / 246 = **2.82 hrs/point**
 | TEAM5-81 | After-Sales | As an After-Sales Associate, I want to view all active service requests so that I can monitor ongoing repair workloads. | After-Sales Workload Views | 2 |
 | TEAM5-10 | Admin | As an Admin, I want to view a cross-store revenue dashboard with monthly breakdowns, so that I can monitor business performance at a glance. | Analytics & Oversight | 5 |
 | TEAM5-65 | Admin | As an Admin, I want to filter the revenue dashboard by country, so that I can analyse performance across specific geographies. | Analytics & Oversight | 2 |
-| TEAM5-63 | After-Sales | As an After-Sales Specialist I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 3 |
 | TEAM5-54 | After-Sales | As an After-Sales Specialist, I want to generate an itemised cost estimate (parts + labour + timeline), so that the client knows exactly what the repair will cost and how long it will take. | Estimate & Approval | 3 |
 | TEAM5-55 | After-Sales | As an After-Sales Specialist, I want to send the cost estimate to the client digitally for approval or decline, so that no work begins without the client's consent. | Estimate & Approval | 3 |
 | TEAM5-56 | After-Sales | As an After-Sales Specialist, I want the repair to proceed only after client approval, so that we avoid disputes over unauthorised work. | Estimate & Approval | 3 |
