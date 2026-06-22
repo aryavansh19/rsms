@@ -1,6 +1,6 @@
 # TEAM5 Story Points - Rationale
 
-Total: 77 stories, 245 points. Scale 1/2/3/5/8.
+Total: 77 stories, 245 points.
 
 ## Admin
 | Key | Story | Pts | Rationale |
