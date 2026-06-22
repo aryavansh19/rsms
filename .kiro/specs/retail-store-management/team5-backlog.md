@@ -2,42 +2,40 @@
 
 74 user stories from `team5_user_stories_only.txt` (TEAM5-78 removed), keyed by Jira ID.
 
-**Estimation basis:** effort + tech stack + feature difficulty. One-time setup/infrastructure is **baked into the first-of-subsystem feature stories** (no separate developer-setup stories), per review feedback.
+**Estimation basis:** effort + tech stack + feature difficulty, scale 1/2/3/5/8 (capped at 8).
 
-**Scale:** Fibonacci 1/2/3/5/8 (capped at 8). Baseline = TEAM5-58 (1 pt); reference = TEAM5-2 (8 pts, carries the data layer).
+**Setup rule:** one-time project/git/architecture setup is baked **only into Sprint 1** - specifically TEAM5-60 (auth + app scaffold) and TEAM5-2 (data layer). Sprints 2 & 3 are pure feature estimates. (QR/AI/Razorpay sit at 8 for tech difficulty, not setup.)
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
 | Total stories | 74 |
-| Total story points | 235 |
+| Total story points | 227 |
 | Must / Should / Could | 39 / 32 / 3 |
-| Points 1/2/3/5/8 | 1 / 26 / 37 / 3 / 7 |
+| Points 1/2/3/5/8 | 1 / 24 / 41 / 3 / 5 |
 
 ## Sprint Capacity Plan
 
-Total capacity = 693 hrs (Week 1: 189, Week 2: 283.5, Week 3: 220.5). 
-Velocity = 693 / 235 = **2.95 hrs per story point** (blended; setup absorbed into points).
+Total = 693 hrs (Week 1: 189, Week 2: 283.5, Week 3: 220.5). 
+Velocity = 693 / 227 = **3.05 hrs per story point**.
 
 | Sprint | Theme | Stories | Points | Capacity (hrs) | Points x rate |
 |--------|-------|---------|--------|----------------|---------------|
-| 1 | Foundation + setup-heavy stories | 22 | 64 | 189.0 | 188.7 |
-| 2 | Commerce + transfers + events | 26 | 96 | 283.5 | 283.1 |
-| 3 | After-sales + analytics + submissions | 26 | 75 | 220.5 | 221.2 |
-| **Total** | | **74** | **235** | **693** | **693** |
+| 1 | Foundation + setup (60 & 2 carry setup) | 22 | 62 | 189.0 | 189.3 |
+| 2 | Commerce + transfers + events | 26 | 93 | 283.5 | 283.9 |
+| 3 | After-sales + analytics + submissions | 26 | 72 | 220.5 | 219.8 |
+| **Total** | | **74** | **227** | **693** | **693** |
 
-_Setup embedded in: TEAM5-60 (auth+scaffold, 8), TEAM5-2 (data layer, 8), TEAM5-7 (payment config, 5), TEAM5-86 (notification infra, 5), TEAM5-10 (charting, 8), TEAM5-31 (QR/Vision+atomic, 8), TEAM5-33 (Razorpay, 8), TEAM5-26 (Core ML, 8). Scale capped at 8._
-
-## Sprint 1 (22 stories, 64 pts)
+## Sprint 1 (22 stories, 62 pts)
 
 | Key | Role | User Story | Epic | Pts |
 |-----|------|-----------|------|-----|
 | TEAM5-9 | Admin | As an Admin, I want to view each manager’s currently assigned store, so that I know who is responsible for which location at any time. | Analytics & Oversight | 2 |
 | TEAM5-60 | Admin | As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 8 |
-| TEAM5-61 | Manager | As a Manager, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 2 |
-| TEAM5-62 | Sales Associate | As a Sales Associate I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 2 |
-| TEAM5-63 | After-Sales | As an After-Sales Specialist I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 2 |
+| TEAM5-61 | Manager | As a Manager, I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 3 |
+| TEAM5-62 | Sales Associate | As a Sales Associate I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 3 |
+| TEAM5-63 | After-Sales | As an After-Sales Specialist I want to log in with my credentials, so that I can access only the features and data relevant to my role. | Auth & RBAC | 3 |
 | TEAM5-68 | Admin | As an Admin, I want to receive and review transfer requests raised by managers, so that I can evaluate stock needs across the network. | Inter-store Transfers | 2 |
 | TEAM5-82 | Admin | As an Admin, I want to verify warehouse stock availability for requested items so that I can decide whether inventory can be transferred immediately. | Inter-store Transfers | 2 |
 | TEAM5-16 | Manager | As a Manager, I want low-stock items to be flagged automatically for reorder, so that I can take action before the product runs out. | Inventory Base | 3 |
@@ -50,13 +48,13 @@ _Setup embedded in: TEAM5-60 (auth+scaffold, 8), TEAM5-2 (data layer, 8), TEAM5-
 | TEAM5-58 | Admin | As an Admin, I want the manager profile view to be read-only, so that performance records cannot be altered. | Profiles | 1 |
 | TEAM5-73 | Admin | As an Admin I want to delete Manager profile so that the person who has resgined is not in the database anymore. | Profiles | 2 |
 | TEAM5-74 | Manager | As a Manager I want to delete Staff profile so that the person who has resgined is not in the database anymore. | Profiles | 2 |
-| TEAM5-2 | Admin | As an Admin, I want to create a new store profile with name, address, and contact details, so that the store is registered in the system and visible across the platform. | Store Onboarding | 8 |
+| TEAM5-2 | Admin | As an Admin, I want to create a new store profile with name, address, and contact details, so that the store is registered in the system and visible across the platform. | Store Onboarding | 5 |
 | TEAM5-6 | Admin | As an Admin, I want to assign a locale, currency, and timezone to each store, so that all transactions, reports, and communications reflect the store’s local context. | Store Onboarding | 2 |
-| TEAM5-7 | Admin | As an Admin, I want to configure payment terminals (Razorpay and card) for a new store, so that the store can accept payments from day one. | Store Onboarding | 5 |
+| TEAM5-7 | Admin | As an Admin, I want to configure payment terminals (Razorpay and card) for a new store, so that the store can accept payments from day one. | Store Onboarding | 3 |
 | TEAM5-72 | Admin | As an Admin I want to remove store profile so that the store which is not operational doesn't reflect in database. | Store Onboarding | 3 |
 | TEAM5-8 | Admin | As an Admin, I want to assign a manager when creating a store, so that the store has operational ownership from day one. | Store Onboarding | 2 |
 
-## Sprint 2 (26 stories, 96 pts)
+## Sprint 2 (26 stories, 93 pts)
 
 | Key | Role | User Story | Epic | Pts |
 |-----|------|-----------|------|-----|
@@ -80,14 +78,14 @@ _Setup embedded in: TEAM5-60 (auth+scaffold, 8), TEAM5-2 (data layer, 8), TEAM5-
 | TEAM5-83 | Admin | As an Admin, I want to approve transfer requests when sufficient stock is available so that inventory can be dispatched to stores. | Inter-store Transfers | 3 |
 | TEAM5-84 | Admin | As an Admin, I want to create purchase orders when warehouse stock is insufficient so that required inventory can be replenished. | Inter-store Transfers | 3 |
 | TEAM5-85 | Admin | As an Admin, I want to dispatch approved inventory transfers to stores so that requested products reach their destination. | Inter-store Transfers | 3 |
-| TEAM5-86 | Admin | As an Admin, I want store managers to receive transfer status notifications so that they can prepare for incoming inventory. | Inter-store Transfers | 5 |
+| TEAM5-86 | Admin | As an Admin, I want store managers to receive transfer status notifications so that they can prepare for incoming inventory. | Inter-store Transfers | 2 |
 | TEAM5-30 | Sales Associate | As a Sales Associate, I want to check inventory availability (in-store, warehouse, nearby stores) before presenting a product, so that I don't recommend items that are out of stock. | Sell, QR & Payments | 3 |
 | TEAM5-31 | Sales Associate | As a Sales Associate, I want to scan a product's QR code at the point of sale, so that both the client's purchase history and the store's inventory records are updated simultaneously in one action. | Sell, QR & Payments | 8 |
 | TEAM5-33 | Sales Associate | As a Sales Associate, I want to take payment via Razorpay and issue a digital receipt, so that checkout is fast and compliant. | Sell, QR & Payments | 8 |
 | TEAM5-34 | Sales Associate | As a Sales Associate, I want to process payments via card terminal (tap/swipe), so that clients can pay with credit or debit cards. | Sell, QR & Payments | 3 |
 | TEAM5-35 | Sales Associate | As a Sales Associate, I want to route the completed order as a store sale, BOPIS reservation, or ship-from-warehouse, so that the correct fulfilment process is triggered based on the order type. | Sell, QR & Payments | 3 |
 
-## Sprint 3 (26 stories, 75 pts)
+## Sprint 3 (26 stories, 72 pts)
 
 | Key | Role | User Story | Epic | Pts |
 |-----|------|-----------|------|-----|
@@ -103,7 +101,7 @@ _Setup embedded in: TEAM5-60 (auth+scaffold, 8), TEAM5-2 (data layer, 8), TEAM5-
 | TEAM5-77 | After-Sales | As an After-Sales Associate, I want to view pending customer approvals so that I can follow up on delayed responses. | After-Sales Workload Views | 2 |
 | TEAM5-80 | After-Sales | As an After-Sales Associate, I want to filter repair requests by status so that I can quickly locate specific service cases. | After-Sales Workload Views | 2 |
 | TEAM5-81 | After-Sales | As an After-Sales Associate, I want to view all active service requests so that I can monitor ongoing repair workloads. | After-Sales Workload Views | 2 |
-| TEAM5-10 | Admin | As an Admin, I want to view a cross-store revenue dashboard with monthly breakdowns, so that I can monitor business performance at a glance. | Analytics & Oversight | 8 |
+| TEAM5-10 | Admin | As an Admin, I want to view a cross-store revenue dashboard with monthly breakdowns, so that I can monitor business performance at a glance. | Analytics & Oversight | 5 |
 | TEAM5-65 | Admin | As an Admin, I want to filter the revenue dashboard by country, so that I can analyse performance across specific geographies. | Analytics & Oversight | 2 |
 | TEAM5-54 | After-Sales | As an After-Sales Specialist, I want to generate an itemised cost estimate (parts + labour + timeline), so that the client knows exactly what the repair will cost and how long it will take. | Estimate & Approval | 3 |
 | TEAM5-55 | After-Sales | As an After-Sales Specialist, I want to send the cost estimate to the client digitally for approval or decline, so that no work begins without the client's consent. | Estimate & Approval | 3 |

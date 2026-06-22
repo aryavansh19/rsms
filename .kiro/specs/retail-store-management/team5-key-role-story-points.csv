@@ -1,10 +1,10 @@
 Key,Role,Story,Points
-TEAM5-2,Admin,"As an Admin, I want to create a new store profile with name, address, and contact details, so that the store is registered in the system and visible across the platform.",8
+TEAM5-2,Admin,"As an Admin, I want to create a new store profile with name, address, and contact details, so that the store is registered in the system and visible across the platform.",5
 TEAM5-6,Admin,"As an Admin, I want to assign a locale, currency, and timezone to each store, so that all transactions, reports, and communications reflect the store’s local context.",2
-TEAM5-7,Admin,"As an Admin, I want to configure payment terminals (Razorpay and card) for a new store, so that the store can accept payments from day one.",5
+TEAM5-7,Admin,"As an Admin, I want to configure payment terminals (Razorpay and card) for a new store, so that the store can accept payments from day one.",3
 TEAM5-8,Admin,"As an Admin, I want to assign a manager when creating a store, so that the store has operational ownership from day one.",2
 TEAM5-9,Admin,"As an Admin, I want to view each manager’s currently assigned store, so that I know who is responsible for which location at any time.",2
-TEAM5-10,Admin,"As an Admin, I want to view a cross-store revenue dashboard with monthly breakdowns, so that I can monitor business performance at a glance.",8
+TEAM5-10,Admin,"As an Admin, I want to view a cross-store revenue dashboard with monthly breakdowns, so that I can monitor business performance at a glance.",5
 TEAM5-11,Manager,"As a Manager, I want to create a VIP or launch event with name, date, time, venue, and description, so that the event is formally scheduled.",3
 TEAM5-12,Manager,"As a Manager, I want to send digital invitations to selected customers, so that they can be informed about upcoming events.",2
 TEAM5-13,Manager,"As a Manager, I want to review shift histories so that I can monitor employee attendance.",2
@@ -50,9 +50,9 @@ TEAM5-56,After-Sales,"As an After-Sales Specialist, I want the repair to proceed
 TEAM5-57,After-Sales,"As an After-Sales Specialist, I want declined repairs to skip the repair workflow and go directly to return/pickup scheduling, so that the client can retrieve their item without delay.",2
 TEAM5-58,Admin,"As an Admin, I want the manager profile view to be read-only, so that performance records cannot be altered.",1
 TEAM5-60,Admin,"As an Admin, I want to log in with my credentials, so that I can access only the features and data relevant to my role.",8
-TEAM5-61,Manager,"As a Manager, I want to log in with my credentials, so that I can access only the features and data relevant to my role.",2
-TEAM5-62,Sales Associate,"As a Sales Associate I want to log in with my credentials, so that I can access only the features and data relevant to my role.",2
-TEAM5-63,After-Sales,"As an After-Sales Specialist I want to log in with my credentials, so that I can access only the features and data relevant to my role.",2
+TEAM5-61,Manager,"As a Manager, I want to log in with my credentials, so that I can access only the features and data relevant to my role.",3
+TEAM5-62,Sales Associate,"As a Sales Associate I want to log in with my credentials, so that I can access only the features and data relevant to my role.",3
+TEAM5-63,After-Sales,"As an After-Sales Specialist I want to log in with my credentials, so that I can access only the features and data relevant to my role.",3
 TEAM5-65,Admin,"As an Admin, I want to filter the revenue dashboard by country, so that I can analyse performance across specific geographies.",2
 TEAM5-66,Admin,"As an Admin, I want to create a new SKU with product details and define its launch date, so that the product is catalogued and ready for distribution.",3
 TEAM5-67,Admin,"As an Admin, I want to set a minimum floor price per SKU per currency, so that managers cannot discount below a level that protects brand value and margins.",3
@@ -72,4 +72,4 @@ TEAM5-82,Admin,"As an Admin, I want to verify warehouse stock availability for r
 TEAM5-83,Admin,"As an Admin, I want to approve transfer requests when sufficient stock is available so that inventory can be dispatched to stores.",3
 TEAM5-84,Admin,"As an Admin, I want to create purchase orders when warehouse stock is insufficient so that required inventory can be replenished.",3
 TEAM5-85,Admin,"As an Admin, I want to dispatch approved inventory transfers to stores so that requested products reach their destination.",3
-TEAM5-86,Admin,"As an Admin, I want store managers to receive transfer status notifications so that they can prepare for incoming inventory.",5
+TEAM5-86,Admin,"As an Admin, I want store managers to receive transfer status notifications so that they can prepare for incoming inventory.",2
