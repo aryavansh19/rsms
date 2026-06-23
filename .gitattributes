@@ -1,0 +1,9 @@
+# Reduce Xcode project-file merge conflicts: keep additions from both sides
+*.pbxproj merge=union
+*.pbxproj -text
+
+# Treat these as binary (no line-merge noise)
+*.xcassets/** -text
+*.png binary
+*.jpg binary
+*.mlmodel binary
