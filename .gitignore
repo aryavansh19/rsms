@@ -1,0 +1,11 @@
+build/
+DerivedData/
+*.xcodeproj
+*.xcworkspace
+xcuserdata/
+*.xcuserstate
+.DS_Store
+.build/
+Package.resolved
+Secrets.xcconfig
+*.env

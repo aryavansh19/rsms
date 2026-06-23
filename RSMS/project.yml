@@ -1,0 +1,25 @@
+name: RSMS
+options:
+  bundleIdPrefix: com.team5.rsms
+  deploymentTarget: { iOS: "26.0" }
+settings:
+  base: { SWIFT_VERSION: "6.0", GENERATE_INFOPLIST_FILE: YES }
+packages:
+  Supabase: { url: https://github.com/supabase/supabase-swift, from: 2.0.0 }
+targets:
+  RSMS:
+    type: application
+    platform: iOS
+    sources: [RSMS]
+    dependencies: [{ package: Supabase }]
+    settings: { base: { TARGETED_DEVICE_FAMILY: "1,2" } }
+  RSMSTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [RSMSTests]
+    dependencies: [{ target: RSMS }]
+  RSMSUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [RSMSUITests]
+    dependencies: [{ target: RSMS }]
