@@ -1,0 +1,45 @@
+name: iOS CI
+
+# Build + test on every PR into main, and on pushes to main.
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-test:
+    name: Build & Test
+    runs-on: macos-15        # macOS runner with Xcode
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_16.app || true
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      # Adjust -project/-scheme to match your Xcode project once it's committed.
+      # If you use a workspace (SPM/CocoaPods), switch -project to -workspace.
+      - name: Build & test
+        run: |
+          set -o pipefail
+          xcodebuild \
+            -project NexusRetail.xcodeproj \
+            -scheme NexusRetail \
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
+            clean build test \
+            CODE_SIGNING_ALLOWED=NO | xcpretty || \
+          xcodebuild \
+            -project NexusRetail.xcodeproj \
+            -scheme NexusRetail \
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
+            clean build test \
+            CODE_SIGNING_ALLOWED=NO
