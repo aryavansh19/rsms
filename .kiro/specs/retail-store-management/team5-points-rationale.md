@@ -1,6 +1,6 @@
 # TEAM5 Story Points - Rationale
 
-Total: 77 stories, 242 points.
+Total: 77 stories, 241 points.
 
 ## Admin
 | Key | Story | Pts | Rationale |
@@ -17,7 +17,7 @@ Total: 77 stories, 242 points.
 | TEAM5-66 | As an Admin, I want to create a new SKU with product details and define its launch date, so that the product is catalogued and ready for distribution. | 3 | SKU form + uniqueness + launch-date validation + cataloguing. >2 for the rules; <5 because asset push lives in a separate concern. |
 | TEAM5-67 | As an Admin, I want to set a minimum floor price per SKU per currency, so that managers cannot discount below a level that protects brand value and margins. | 3 | Per-currency price-band data model + floor constraint enforced downstream. >2 for the model + rule; <5 because enforcement logic sits in the pricing service. |
 | TEAM5-68 | As an Admin, I want to receive and review transfer requests raised by managers, so that I can evaluate stock needs across the network. | 2 | Queue/list of transfer requests with sort. >1 (query + display); <3 (no decision logic - that is a separate story). |
-| TEAM5-72 | As an Admin I want to remove store profile so that the store which is not operational doesn't reflect in database. | 3 | Soft-delete + confirmation + retain history + hide from active lists. >2 (more than a delete button); <5 (contained scope). |
+| TEAM5-72 | As an Admin I want to remove store profile so that the store which is not operational doesn't reflect in database. | 2 | Archive/soft-delete a store with confirmation; history retained; hidden from active lists. 2 - single-entity archive (>1; <3). |
 | TEAM5-73 | As an Admin I want to delete Manager profile so that the person who has resgined is not in the database anymore. | 2 | Soft-delete + audit on a single entity. >1 (confirmation/audit); <3 (single record, no cascade workflow). |
 | TEAM5-82 | As an Admin, I want to verify warehouse stock availability for requested items so that I can decide whether inventory can be transferred immediately. | 2 | On-hand lookup per location + shortfall flag. >1 (query + indicator); <3 (no decision/routing here). |
 | TEAM5-83 | As an Admin, I want to approve transfer requests when sufficient stock is available so that inventory can be dispatched to stores. | 3 | Approval that checks stock and routes from a source store. >2 (conditional logic + state change); <5 (no multi-store optimisation). |

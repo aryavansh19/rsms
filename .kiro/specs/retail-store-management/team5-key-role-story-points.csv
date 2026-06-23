@@ -59,7 +59,7 @@ TEAM5-67,Admin,"As an Admin, I want to set a minimum floor price per SKU per cur
 TEAM5-68,Admin,"As an Admin, I want to receive and review transfer requests raised by managers, so that I can evaluate stock needs across the network.",2
 TEAM5-70,Manager,"As a Manager, I want to track RSVP responses (Accepted, Declined, Pending), so that I can estimate event attendance.",2
 TEAM5-71,Manager,"As a Manager, I want to view event analytics and RSVP reports, so that I can evaluate event performance.",3
-TEAM5-72,Admin,As an Admin I want to remove store profile so that the store which is not operational doesn't reflect in database.,3
+TEAM5-72,Admin,As an Admin I want to remove store profile so that the store which is not operational doesn't reflect in database.,2
 TEAM5-73,Admin,As an Admin I want to delete Manager profile so that the person who has resgined is not in the database anymore.,2
 TEAM5-74,Manager,As a Manager I want to delete Staff profile so that the person who has resgined is not in the database anymore.,2
 TEAM5-75,After-Sales,"As an After-Sales Associate, I want to verify a product's authenticity so that counterfeit items are not accepted for service.",5
