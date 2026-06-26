@@ -69,3 +69,34 @@ $$;
 --   ((select id from store limit 1), 'store', 'completed', 125000, now() - interval '40 days'),
 --   ((select id from store limit 1), 'store', 'completed',  89000, now() - interval '12 days'),
 --   ((select id from store limit 1), 'store', 'completed', 210000, now() - interval '3 days');
+
+
+-- ============================================================
+-- Top products by revenue, weekly or monthly window.
+-- Requires order_line_item to be populated (see seed.sql backfill).
+--   p_period: 'week' (last 7 days) or 'month' (last 30 days)
+--   p_metric: 'revenue' or 'units'
+-- ============================================================
+create or replace function top_products(
+    p_period  text default 'month',
+    p_limit   int  default 10,
+    p_country text default null
+)
+returns table(sku_id uuid, name text, category text, units int, revenue numeric)
+language sql security definer stable as $$
+  select s.id, s.name, s.category,
+         sum(li.quantity)::int               as units,
+         sum(li.quantity * li.applied_price) as revenue
+  from order_line_item li
+  join orders o  on o.id = li.order_id
+  join sku    s  on s.id = li.sku_id
+  join store  st on st.id = o.store_id
+  where o.status = 'completed'
+    and o.created_at >= (case when p_period = 'week'
+                              then now() - interval '7 days'
+                              else now() - interval '30 days' end)
+    and (p_country is null or st.country = p_country)
+  group by s.id, s.name, s.category
+  order by revenue desc
+  limit p_limit;
+$$;
